@@ -10,4 +10,4 @@ Without contacting the designer for images and font, i managed to realize this f
 ![Base Mock-up](https://github.com/IonutDaniel99/Portfolio/blob/master/public/Images/Indonesia/Mockup.jpg?raw=true)
 
 ### Final Page 
-![Base Mock-up](https://raw.githubusercontent.com/IonutDaniel99/Portfolio/master/public/Images/Indonesia/Final.png?raw=true)
+![Final Page](https://github.com/IonutDaniel99/Portfolio/blob/master/public/Images/Indonesia/Final.png?raw=true)
