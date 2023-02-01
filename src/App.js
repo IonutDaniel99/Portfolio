@@ -1,4 +1,4 @@
-import { BrowserRouter, Switch, Route, Link, NavLink, Routes } from 'react-router-dom'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import HomeApp from './Home/HomeApp';
 import IndonesiaApp from './Projects/FromDesignToCode/Indonesia/IndonesiaApp';
 
