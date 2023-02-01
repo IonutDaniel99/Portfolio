@@ -5,7 +5,8 @@ function HomeApp() {
     return (
         <div className='flex gap-20'>
             <NavLink to={'/'}>Home</NavLink>
-            <NavLink to={'/Projects/FromDesignToCode/Indonesia'} target="_blank" rel="noopener noreferrer" >From Design To Code</NavLink>
+            <NavLink to={'/Projects/FromDesignToCode/Indonesia'} target="_blank" rel="noopener noreferrer" >Indonesia</NavLink>
+            <NavLink to={'/Projects/FromDesignToCode/Cards'} target="_blank" rel="noopener noreferrer" >Cards</NavLink>
         </div>
     )
 }
