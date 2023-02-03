@@ -1,7 +1,6 @@
-import { MeshReflectorMaterial } from "@react-three/drei";
 import { useFrame, useLoader } from "@react-three/fiber";
 import { useEffect } from "react";
-import { ImageLoader, LinearEncoding, RepeatWrapping, TextureLoader } from "three";
+import { RepeatWrapping, TextureLoader } from "three";
 
 
 export function InfiniteRoad({ roadSpeed = 0.30 }) {

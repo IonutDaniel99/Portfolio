@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react'
-import { useGLTF, useHelper } from '@react-three/drei'
-import { MathUtils, SpotLightHelper } from 'three'
+import { useGLTF } from '@react-three/drei'
+import { MathUtils } from 'three'
 import { useFrame } from '@react-three/fiber'
 
 function Model({ carWheelSpeed = 2.5 }) {
@@ -13,8 +13,6 @@ function Model({ carWheelSpeed = 2.5 }) {
 
   const INITIAL_CAR_POSITION = -20
   const PERFECT_CAR_POSITION = 0
-
-
 
   useEffect(() => {
     let carMaterial = materials.material
