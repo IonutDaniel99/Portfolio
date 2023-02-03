@@ -3,25 +3,35 @@
 import React, { useEffect, useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 import { useFrame } from '@react-three/fiber'
+import { MathUtils } from 'three'
 
 function Model(props) {
-  const { nodes, materials } = useGLTF('/models/MazdaRx8/mazda.gltf')
+  const { nodes, materials, scene } = useGLTF('/models/MazdaRx8/mazda.gltf')
   const { nodes: nodes2, materials: materials2 } = useGLTF('/models/Mazda3/mazda3.gltf')
 
   const carMeshRef = useRef()
 
-  const INITIAL_CAR_POSITION = -20.1
+  const INITIAL_CAR_POSITION = -20
   let PERFECT_CAR_POSITION = 0
 
   useEffect(() => {
     let mate = materials.RRBaseMatWM
     mate.color = {
-      r: 120,
-      b: 120,
-      g: 120,
+      r: 0.20,
+      b: 0.01,
+      g: 0.01,
     }
     mate.transparent = true
     mate.opacity = 0.7
+
+    scene.traverse(obj => {
+      obj.castShadow = true;
+      obj.receiveShadow = true;
+
+      if (obj.material?.envMapIntensity) {
+        obj.material.envMapIntensity = 5
+      }
+    })
   }, [materials])
 
   const frontWheel = useRef()
@@ -31,10 +41,8 @@ function Model(props) {
 
   useFrame((state, delta) => {
     let t = state.clock.getElapsedTime();
-
     if (carMeshRef.current.position.x < PERFECT_CAR_POSITION) {
-      let variable_speed = 10
-      carMeshRef.current.position.x = INITIAL_CAR_POSITION + (t * variable_speed)
+      carMeshRef.current.position.x = MathUtils.lerp(carMeshRef.current.position.x, 0, 0.025)
     }
 
     frontWheel.current.rotation.x = t * wheelSpeed
@@ -44,7 +52,7 @@ function Model(props) {
   })
 
   return (
-    <group {...props} dispose={null} position={[-20, 0, 0]} ref={carMeshRef}>
+    <group {...props} dispose={null} position={[INITIAL_CAR_POSITION, 0, 0]} ref={carMeshRef}>
       <group rotation={[-Math.PI / 3, 0, 1.55]} position={[0, 0.50, 0.1]}>
         <mesh geometry={nodes.Object_2.geometry} material={materials['1RX7VS_Calipers']} />
         {/* <mesh geometry={nodes.Object_3.geometry} material={materials['1RX7VS_Rims']} /> */}
