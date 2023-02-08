@@ -13,7 +13,7 @@ function TristanaCard() {
                                 <span className='relative px-1 scale-150 bottom-[2px] text-[#272727]'>•</span>
                                 <p className='font-medium font-Mitr'>Dragon Trainer</p>
                             </span>
-                            <p className='text-sm font-medium font-Mitr opacity-40'>The yordle Gunner</p>
+                            <p className='text-sm font-medium font-Mitr opacity-40'>The Yordle Gunner</p>
                         </div>
                         <img src='/Images/Cards/leagueoflegends/leagueicon.png' alt='' className='w-11 h-11' />
                     </div>
@@ -22,7 +22,7 @@ function TristanaCard() {
                         <p className='text-[10px] font-roboto'>Like most yordles, Tristana was always fascinated by the world beyond Bandle City. She traveled far and wide, full of wonder and enthusiasm for the varied places, people, and creatures she encountered... <span className='underline cursor-pointer text-[#7996E1] '>Read more</span></p>
                     </div>
                     <div className='flex justify-around pb-4'>
-                        <div className='flex flex-col items-center'>
+                        <div className='flex flex-col items-center font-Mitr'>
                             <p className='text-[12px] text-[#787878]  h-4 align-middle mb-1'>Type:</p>
                             <p className='text-[#F0E6D2] text-[12px] h-4 align-middle'>Marksman</p>
                         </div>
