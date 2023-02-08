@@ -8,8 +8,14 @@ module.exports = {
       'AlexBrush': ['Alex Brush', 'cursive'],
       'BebasNeue': ['Bebas Neue', 'cursive'],
       'PaulGrotesk': ['Source Sans Pro', 'sans-serif'],
+      'Mitr': ['Mitr', 'sans-serif'],
+      'roboto': ['Roboto', 'sans-serif']
     },
-    extend: {},
+    extend: {
+      fontSize: {
+        12: '12px'
+      },
+    },
   },
   plugins: [],
 }
