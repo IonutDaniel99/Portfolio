@@ -2,7 +2,7 @@ import React from 'react'
 
 function SorakaCard() {
     return (
-        <div className='relative'>
+        <div className='relative w-[450px]'>
             <div className='bg-[#D6E1FF] w-[450px] h-full flex items-center justify-center flex-col absolute text-[#1E2328] top-0 left-0 z-0 border-2 '>
                 <card className=" font-Mitr bg-gradient-to-br from-white to-[#f3f3f3]  w-80 rounded-xl scale-[.99] border-[#bbbbbb] border-[1px]">
                     <img src='/Images/Cards/leagueoflegends/sorakadawn.jpeg' alt='' className='border-b-[1px] border-black rounded-tr-xl rounded-tl-xl' />

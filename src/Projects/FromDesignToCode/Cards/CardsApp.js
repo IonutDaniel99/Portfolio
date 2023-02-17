@@ -15,8 +15,7 @@ function CardsApp() {
                 <MusicCard />
                 <TristanaCard />
                 <SorakaCard />
-                <div className='w-[450px]'>6</div>
-                <div className='w-[450px]'>6</div>
+                <div className='w-[450px] relative'>6</div>
             </div>
         </div>
     )
