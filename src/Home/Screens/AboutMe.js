@@ -1,11 +1,13 @@
 import React from "react";
-import ScrollDownNounSvg from "../Icons/ScrollDownNounSvg";
 
 function AboutMe() {
     return (
-        <div className="z-50 font-Mitr text-white">
-            <div className="flex justify-center h-full items-center">
-                <div className="flex gap-16 flex-col justify-center -mt-24 h-full ml-24">
+        <div
+            className="z-10 font-Mitr text-white flex items-center h-[1080px] relative"
+            id="aboutme"
+        >
+            <div className="flex items-center gap-20 ml-20">
+                <div className="flex gap-16 flex-col justify-center -mt-24 h-full">
                     <p className="text-9xl font-semibold tracking-wider">
                         Hi, I`m DANIEL
                     </p>
@@ -23,9 +25,6 @@ function AboutMe() {
                     alt=""
                     className="w-[470px] h-[650px] ml-10"
                 />
-            </div>
-            <div className="absolute flex justify-center bottom-0 w-full animate-pulse">
-                <ScrollDownNounSvg />
             </div>
         </div>
     );

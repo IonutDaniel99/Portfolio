@@ -28,10 +28,10 @@ function Bg2ColorsFollow() {
         <>
             <div
                 ref={blobRef}
-                className="bg-white h-[300px] aspect-square absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full
-                           bg-gradient-to-r from-red-600  to-blue-600 z-10 animate-spin-slow transform-gpu overflow-hidden"
+                className="h-[300px] aspect-square absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full
+                           bg-gradient-to-r from-red-600  to-blue-600 animate-spin-slow overflow-hidden z-[1]"
             ></div>
-            <div className="h-screen w-screen absolute z-20 blur-blob"></div>
+            <div className="h-[2000px] w-screen absolute z-[2] blur-blob"></div>
         </>
     );
 }
