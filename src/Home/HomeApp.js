@@ -9,7 +9,7 @@ import Experience from "./Screens/Experience";
 function HomeApp() {
     return (
         <>
-            <NavBar />
+            {/* <NavBar /> */}
             <Bg2ColorsFollow />
             <div className="bg-darkNotDark">
                 <div className="z-[3] relative overflow-y-auto overflow-x-hidden h-full">
