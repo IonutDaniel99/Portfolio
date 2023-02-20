@@ -2,7 +2,7 @@ import React from "react";
 
 function Experience() {
     return (
-        <div className="w-screenz-10 h-[1080px] relative" id="experience">
+        <div className="z-50 w-screen h-screen text-white" id="experience">
             Experience
         </div>
     );
