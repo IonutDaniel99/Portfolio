@@ -8,6 +8,7 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "disable-scroll": "^0.6.0",
     "gsap": "^3.11.4",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.1",
@@ -16,6 +17,7 @@
     "react-router-dom": "^6.8.0",
     "react-scripts": "5.0.1",
     "react-scroll": "^1.8.9",
+    "react-top-loading-bar": "^2.3.1",
     "sort-by": "^1.2.0",
     "three": "^0.149.0",
     "web-vitals": "^2.1.4"

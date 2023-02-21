@@ -52,7 +52,7 @@ function Experience() {
     }, []);
     return (
         <div className="flex flex-col items-center w-screen h-1/2 experience">
-            <div className="z-10 pt-20 text-6xl text-white experienceTitle clipFade">
+            <div className="z-10 pt-20 text-6xl text-white experienceTitle clipFade font-Mitr font-medium border-b-4 border-white border-solid pb-2.5">
                 Work Experience
             </div>
             <div className="z-10 flex items-center pt-20 justify-evenly h-1/2 ">
