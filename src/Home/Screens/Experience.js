@@ -28,8 +28,9 @@ function Experience() {
             scrollTrigger: {
                 trigger: '.experienceTitle',
                 start: "top 70%",
+                end: "top 80%",
                 markers: true,
-                id: '2'
+                scrub: 3,
             }
         })
     })
