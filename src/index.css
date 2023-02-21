@@ -12,8 +12,8 @@ html,
 body {
   overflow-y: visible;
   position: relative;
-  overflow-x: hidden;
   margin: 0;
+  height: 100vh;
 }
 
 .blur-blob {
@@ -37,12 +37,6 @@ body {
   transform: translateY(100px)
 } */
 
-.containergsap {
-  width: 600vw;
-  height: 100vh;
-  display: flex;
-  flex-wrap: wrap;
-}
 
 .lastContainer {
   display: flex;

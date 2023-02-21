@@ -6,13 +6,13 @@ import ScrollDownNounSvg from "./Icons/ScrollDownNounSvg";
 import AboutMe from "./Screens/AboutMe";
 import Experience from "./Screens/Experience";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Projects from "./Screens/Projects";
 
 export default HomeApp;
 
 gsap.registerPlugin(ScrollTrigger);
 function HomeApp() {
 
-    ScrollTrigger.defaults({ markers: { startColor: "green", endColor: "red" } });
 
 
     return (
@@ -24,6 +24,7 @@ function HomeApp() {
                 <div className="z-10 containergsap">
                     <Experience />
                 </div>
+                <Projects />
                 {/* <div className="lastContainer">Last Container</div> */}
             </div>
         </div>

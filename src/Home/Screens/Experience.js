@@ -1,7 +1,9 @@
 import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
 import React, { useEffect } from "react";
 
 function Experience() {
+    ScrollTrigger.defaults({ markers: { startColor: "green", endColor: "red" } });
 
     useEffect(() => {
 
@@ -13,7 +15,6 @@ function Experience() {
             duration: 2.2,
             scrollTrigger: {
                 trigger: ".experience",
-                markers: true,
                 scrub: 3,
                 start: "top 60%",
                 end: "top 70%",
@@ -28,8 +29,7 @@ function Experience() {
             scrollTrigger: {
                 trigger: '.experienceTitle',
                 start: "top 50%",
-                end: "top 70%",
-                markers: true,
+                end: "top 90%",
                 scrub: 3,
             }
         })
@@ -42,8 +42,7 @@ function Experience() {
             scrollTrigger: {
                 trigger: '.experienceTitle',
                 start: "top 50%",
-                end: "top 70%",
-                markers: true,
+                end: "top 90%",
                 scrub: 3,
             }
         })
