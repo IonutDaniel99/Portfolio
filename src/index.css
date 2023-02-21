@@ -22,6 +22,17 @@ body {
   margin: 0;
 }
 
+.experienceTitle { 
+  clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+  opacity: 0;
+  transform: translateY(100px)
+}
+.title1 { 
+  clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+  opacity: 0;
+  transform: translateY(100px)
+}
+
 .containergsap {
   width: 600vw;
   height: 100vh;
@@ -35,21 +46,6 @@ body {
   background: yellow;
 }
 
-.panel {
-  width: 100vw;
-  height: 100vh;
-  z-index: 10;
-}
-
-.line {
-  width: 100%;
-  max-width: 800px;
-  height: 8px;
-  margin: 0 0 10px 0;
-  position: relative;
-  display: inline-block;
-  background-color: rgba(255,255,255,1);
-}
 
 
 
