@@ -1,18 +1,14 @@
+html,
 body {
+  position: relative;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  overflow-y: scroll;
   height: 100%;
   -webkit-overflow-scrolling: touch;
   overflow-scrolling: touch;
 }
 
-
-
-html,
-body {
-  overflow-y: visible;
-  position: relative;
-  margin: 0;
+.panel {
+  width: 100vw;
   height: 100vh;
 }
 
@@ -25,17 +21,6 @@ body {
   opacity: 0;
   transform: translateY(100px)
 }
-
-/* .experienceTitle { 
-  clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
-  opacity: 0;
-  transform: translateY(100px)
-}
-.title1 { 
-  clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
-  opacity: 0;
-  transform: translateY(100px)
-} */
 
 
 .lastContainer {

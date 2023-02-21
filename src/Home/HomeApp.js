@@ -12,25 +12,23 @@ export default HomeApp;
 
 gsap.registerPlugin(ScrollTrigger);
 function HomeApp() {
-
-
+    // ScrollTrigger.defaults({
+    //     markers: { startColor: "green", endColor: "red" },
+    // });
 
     return (
         <div className="bg-darkNotDark ">
             <Bg2ColorsFollow />
 
-            <div className="App scroll-smooth ">
+            <div className="App scroll-smooth z-10 overflow-y-hidden">
                 <AboutMe />
-                <div className="z-10 containergsap">
-                    <Experience />
-                </div>
+                <Experience />
                 <Projects />
                 {/* <div className="lastContainer">Last Container</div> */}
             </div>
         </div>
     );
 }
-
 
 // eslint-disable-next-line no-lone-blocks
 // /* <nav className="z-50 flex gap-20">

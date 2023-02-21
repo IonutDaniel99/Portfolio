@@ -1,13 +1,9 @@
 import React from "react";
-import Bg2ColorsFollow from "../Components/Bg2ColorsFollow";
 
 function AboutMe() {
     return (
         <>
-
-            <div
-                className="relative z-10 flex justify-between w-screen h-screen text-white font-Mitr aboutme"
-            >
+            <div className="relative z-10 flex justify-between w-screen h-screen text-white font-Mitr">
                 <div className="flex items-center w-full gap-20 ml-20 z-[3]">
                     <div className="flex flex-col gap-16 -mt-24">
                         <p className="font-semibold tracking-wider text-9xl min-w-[1000px]">
@@ -15,7 +11,8 @@ function AboutMe() {
                         </p>
                         <h2 className="text-32 min-w-[1000px]">
                             Front-end developer with a passion for games <br />
-                            and for graphical environments that captivates the eyes.
+                            and for graphical environments that captivates the
+                            eyes.
                         </h2>
                         <h2 className="text-32 min-w-[1000px]">
                             I`m currently based in Romania, <br />
@@ -30,7 +27,6 @@ function AboutMe() {
                 </div>
             </div>
         </>
-
     );
 }
 
