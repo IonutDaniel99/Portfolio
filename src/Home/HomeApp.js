@@ -6,25 +6,20 @@ import Experience from "./Screens/Experience";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Projects from "./Screens/Projects";
 import disableScroll from "disable-scroll";
+import LoadingBarScroll from "./Components/LoadingBarScroll";
 
 export default HomeApp;
 
 gsap.registerPlugin(ScrollTrigger);
 function HomeApp() {
-    const loadingRef = useRef(null);
     const [isLoadingRemoved, setIsLoadingRemoved] = useState(false);
+    const loadingRef = useRef(null);
+    disableScroll.on();
 
-    // ScrollTrigger.defaults({
-    //     markers: { startColor: "green", endColor: "red" },
-    // });
+    const isAboutMeDone = () => {
+        disableScroll.off();
+    }
 
-    useEffect(() => {
-        if (isLoadingRemoved) {
-            disableScroll.off();
-        } else {
-            disableScroll.on();
-        }
-    }, [isLoadingRemoved]);
 
     useEffect(() => {
         let ctx = gsap.context(() => {
@@ -52,9 +47,10 @@ function HomeApp() {
     return (
         <>
             <div className="bg-darkNotDark">
+                <LoadingBarScroll />
                 <Bg2ColorsFollow />
-                <div className="App scroll-smooth z-10 overflow-y-hidden">
-                    <AboutMe />
+                <div className="z-10 overflow-y-hidden App scroll-smooth">
+                    <AboutMe loadingRemoved={isLoadingRemoved} isAboutMeDone={() => isAboutMeDone()} />
                     <Experience />
                     <Projects />
                     {/* <div className="lastContainer">Last Container</div> */}

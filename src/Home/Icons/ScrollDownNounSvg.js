@@ -6,6 +6,7 @@ const ScrollDownNounSvg = (props) => (
         height={92}
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        className={props.className}
         {...props}
     >
         <g clipPath="url(#a)" fill="#fff" fillOpacity={1}>
