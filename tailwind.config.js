@@ -14,6 +14,7 @@ module.exports = {
                 redHalf: "rgba(255, 0, 0, 1)",
                 purpleQuarter: "rgba(123, 0, 154, 1)",
                 blueHalf: "rgba(0, 26, 255, 1)",
+                darkNotDark: "#23272A",
             },
             backgroundColor: {
                 darkNotDark: "#23272A",

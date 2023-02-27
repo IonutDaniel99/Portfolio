@@ -1,5 +1,6 @@
 import gsap from "gsap";
 import React, { useEffect, useLayoutEffect, useRef } from "react";
+import ScreenOne from "./projectsPanels/ScreenOne";
 
 function Projects() {
     const component = useRef();
@@ -19,30 +20,42 @@ function Projects() {
                     end: () => "+=" + slider.current.offsetWidth,
                 },
             });
+
+            gsap.to(".portfolioProjects", {
+                ease: "power4.inOut",
+                clipPath: "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
+                opacity: 1,
+                y: 0,
+                duration: 2.2,
+                scrollTrigger: {
+                    trigger: ".portfolioProjects",
+                    scrub: 3,
+                    start: "top 60%",
+                    end: "top 70%",
+                    toggleActions: "restart reverse none reverse",
+                },
+            });
         }, component);
         return () => ctx.revert();
     });
 
     return (
-        <div ref={component}>
-            <div className="flex flex-col justify-center items-center h-[800px]">
-                <div className="z-10">
-                    <h1>Testing horizontal scrolling w/ three sections</h1>
-                    <h2>First Container</h2>
+        <div ref={component} className="bg-darkNotDark">
+            <div className="flex flex-col justify-center items-center h-[400px] z-20">
+                <div className="z-10 text-6xl text-white portfolioProjects clipFade font-Mitr font-medium border-b-4 border-white border-solid pb-2.5">
+                    Projects
                 </div>
             </div>
             <div
                 ref={slider}
-                className="w-[400vw] h-screen flex flex-wrap z-10"
+                className="w-[400vw] h-full flex flex-wrap z-10"
             >
-                <div className="panel border-2">
-                    <div className=" text-white text-2xl relative">
-                        SCROLL DOWN
-                    </div>
+                <div className="panel">
+                    <ScreenOne />
                 </div>
-                <div className="panel z-10">ONE</div>
-                <div className="panel z-10">TWO</div>
-                <div className="panel z-10">THREE</div>
+                <div className="z-10 panel">ONE</div>
+                <div className="z-10 panel">TWO</div>
+                <div className="z-10 panel">THREE</div>
             </div>
             <div className="flex h-screen bg-yellow-500">Last Container</div>
         </div>

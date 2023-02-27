@@ -29,7 +29,7 @@ function Experience() {
                     trigger: ".experienceTitle",
                     start: "top 50%",
                     end: "top 90%",
-                    toggleActions: "restart reverse none reverse",
+                    toggleActions: "restart reverse reverse reverse",
                     scrub: 3,
                 },
             });
@@ -43,7 +43,7 @@ function Experience() {
                     trigger: ".experienceTitle",
                     start: "top 50%",
                     end: "top 90%",
-                    toggleActions: "restart reverse none reverse",
+                    toggleActions: "restart reverse reverse reverse",
                     scrub: 3,
                 },
             });
