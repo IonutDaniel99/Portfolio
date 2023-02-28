@@ -13,15 +13,14 @@ body {
 }
 
 .blur-blob {
-  backdrop-filter: blur(100px)
+  backdrop-filter: blur(100px);
 }
 
 .clipFade {
   clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
   opacity: 0;
-  transform: translateY(100px)
+  transform: translateY(100px);
 }
-
 
 .lastContainer {
   display: flex;
@@ -29,9 +28,8 @@ body {
   background: yellow;
 }
 
-
-
-@import "react-alice-carousel/lib/alice-carousel.css";
+@import 'react-tooltip/dist/react-tooltip.css';
+@import 'react-alice-carousel/lib/alice-carousel.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

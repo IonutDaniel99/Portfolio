@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import { useEffect } from 'react'
 import AliceCarousel from 'react-alice-carousel'
 import CarouselItem from './CarouselItem'
+import { Tooltip } from 'react-tooltip'
 
 const responsive = {
   0: { items: 1 },
@@ -31,6 +32,8 @@ const items = [
     shouldHaveBorder={true}
   />,
 ]
+
+const popupContent = "Most used libraries: Redux, Redux-Saga, Ramda, i18n, Styled Components, <br/> Axios, Lodash, AG-Grid, Mui, Antd, Socket.Io, etc"
 
 function ScreenOne() {
   useEffect(() => {
@@ -63,6 +66,13 @@ function ScreenOne() {
               <span className='pt-4 text-sm text-gray-500 font-Mitr reactTrigger'>
                 I'm working with <span className='text-blue-400 opacity-100'>ReactJs</span> since May 2021.
               </span>
+
+              <span
+                data-tooltip-id="my-tooltip" data-tooltip-content="Hello world!"
+                className='text-sm text-right text-gray-500 underline cursor-pointer font-Mitr reactTrigger underline-offset-2'>
+                Hover here for more info!
+                <Tooltip id="my-tooltip" html={popupContent} place="left" />
+              </span>
             </div>
           </div>
           <div className='relative w-full top-10'>
@@ -86,8 +96,11 @@ function ScreenOne() {
           </div>
         </div>
       </div>
+
     </div>
   )
 }
 
 export default ScreenOne
+
+

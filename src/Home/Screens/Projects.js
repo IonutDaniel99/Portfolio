@@ -22,18 +22,30 @@ function Projects() {
         }
       })
 
-      gsap.to('.portfolioProjects', {
+      gsap.to('.ProjectsTitle', {
         ease: 'power4.inOut',
         clipPath: 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)',
         opacity: 1,
         y: 0,
         duration: 2.2,
         scrollTrigger: {
-          trigger: '.portfolioProjects',
+          trigger: '.ProjectsTitle',
           scrub: 3,
-          start: 'top 60%',
-          end: 'top 70%',
+          start: 'top 90%',
+          end: 'top 100%',
           toggleActions: 'restart reverse none reverse',
+        },
+      })
+      gsap.to('.sliderProjects', {
+        ease: 'power4.inOut',
+        opacity: 1,
+        duration: 2.2,
+        scrollTrigger: {
+          trigger: '.sliderProjects',
+          scrub: 3,
+          start: 'top 70%',
+          end: 'top 90%',
+          toggleActions: 'play none none none',
         },
       })
     }, component)
@@ -42,16 +54,16 @@ function Projects() {
 
   return (
     <div ref={component} className='bg-darkNotDark'>
-      <div className='flex flex-col justify-end items-center h-[280px] z-20 '>
-        <div className='z-10 text-6xl text-white portfolioProjects clipFade font-Mitr font-medium border-b-4 border-white border-solid pb-2.5'>
+      <div className='flex flex-col justify-end items-center h-[270px] z-20 '>
+        <div className='z-10 text-6xl text-white ProjectsTitle clipFade font-Mitr font-medium border-b-4 border-white border-solid pb-2.5'>
           Projects
         </div>
       </div>
-      <div ref={slider} className='w-[500vw] h-full flex flex-wrap z-10'>
+      <div ref={slider} className='w-[500vw] h-full flex flex-wrap z-10 sliderProjects opacity-0'>
         <div className='z-10 panel'><ScreenOne /></div>
-        <div className='z-10 panel'><ScreenOne /></div>
-        <div className='z-10 panel'><ScreenOne /></div>
-        <div className='z-10 panel'><ScreenOne /></div>
+        <div className='z-10 panel'>2</div>
+        <div className='z-10 panel'>2</div>
+        <div className='z-10 panel'>2</div>
       </div>
       <div className='flex h-screen bg-yellow-500'>Last Container</div>
     </div>
