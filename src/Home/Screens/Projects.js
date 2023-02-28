@@ -18,7 +18,7 @@ function Projects() {
           scrub: 1,
           snap: 1 / (panels.length - 1),
           markers: true,
-          end: () => '+=' + (slider.current.offsetWidth + 200)
+          end: () => '+=' + slider.current.offsetWidth
         }
       })
 
@@ -33,33 +33,27 @@ function Projects() {
           scrub: 3,
           start: 'top 60%',
           end: 'top 70%',
-          toggleActions: 'restart reverse none reverse'
-        }
+          toggleActions: 'restart reverse none reverse',
+        },
       })
     }, component)
     return () => ctx.revert()
   })
 
   return (
-    <div
-      ref={component}
-      className="bg-darkNotDark">
-      <div className="flex flex-col justify-center items-center h-[400px] z-20">
-        <div className="z-10 text-6xl text-white portfolioProjects clipFade font-Mitr font-medium border-b-4 border-white border-solid pb-2.5">
+    <div ref={component} className='bg-darkNotDark'>
+      <div className='flex flex-col justify-end items-center h-[280px] z-20 '>
+        <div className='z-10 text-6xl text-white portfolioProjects clipFade font-Mitr font-medium border-b-4 border-white border-solid pb-2.5'>
           Projects
         </div>
       </div>
-      <div
-        ref={slider}
-        className="w-[400vw] h-full flex flex-wrap z-10">
-        <div className="panel">
-          <ScreenOne />
-        </div>
-        <div className="z-10 panel">ONE</div>
-        <div className="z-10 panel">TWO</div>
-        <div className="z-10 panel">THREE</div>
+      <div ref={slider} className='w-[500vw] h-full flex flex-wrap z-10'>
+        <div className='z-10 panel'><ScreenOne /></div>
+        <div className='z-10 panel'><ScreenOne /></div>
+        <div className='z-10 panel'><ScreenOne /></div>
+        <div className='z-10 panel'><ScreenOne /></div>
       </div>
-      <div className="flex h-screen bg-yellow-500">Last Container</div>
+      <div className='flex h-screen bg-yellow-500'>Last Container</div>
     </div>
   )
 }
