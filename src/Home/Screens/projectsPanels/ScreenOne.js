@@ -75,7 +75,7 @@ function ScreenOne() {
               </span>
             </div>
           </div>
-          <div className='relative w-full top-10'>
+          <div className='relative w-full select-none top-10'>
             <div className='absolute top-0 z-10 w-full h-full pointer-events-none bgScroll'>
               <span className='absolute w-full h-full bg-darkNotDark opacity-70'></span>
               <span className='absolute flex items-center justify-center w-full h-full text-4xl text-gray-200 font-Mitr'>

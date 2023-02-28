@@ -1,6 +1,7 @@
 import gsap from 'gsap'
 import React, { useEffect, useLayoutEffect, useRef } from 'react'
 import ScreenOne from './projectsPanels/ScreenOne'
+import ScreenTwo from './projectsPanels/ScreenTwo'
 
 function Projects() {
   const component = useRef()
@@ -10,7 +11,7 @@ function Projects() {
     let ctx = gsap.context(() => {
       let panels = gsap.utils.toArray('.panel')
       gsap.to(panels, {
-        xPercent: -100 * (panels.length - 1),
+        yPercent: -100 * (panels.length - 1),
         ease: 'none',
         scrollTrigger: {
           trigger: slider.current,
@@ -18,7 +19,7 @@ function Projects() {
           scrub: 1,
           snap: 1 / (panels.length - 1),
           markers: true,
-          end: () => '+=' + slider.current.offsetWidth
+          end: () => '+=' + slider.current.offsetHeight
         }
       })
 
@@ -59,11 +60,11 @@ function Projects() {
           Projects
         </div>
       </div>
-      <div ref={slider} className='w-[500vw] h-full flex flex-wrap z-10 sliderProjects opacity-0'>
+      <div ref={slider} className='z-10 flex flex-row flex-wrap w-full h-screen opacity-0 sliderProjects'>
         <div className='z-10 panel'><ScreenOne /></div>
-        <div className='z-10 panel'>2</div>
-        <div className='z-10 panel'>2</div>
-        <div className='z-10 panel'>2</div>
+        <div className='z-10 panel'><ScreenTwo /></div>
+        <div className='z-10 panel'><ScreenOne /></div>
+        <div className='z-10 panel'><ScreenOne /></div>
       </div>
       <div className='flex h-screen bg-yellow-500'>Last Container</div>
     </div>
