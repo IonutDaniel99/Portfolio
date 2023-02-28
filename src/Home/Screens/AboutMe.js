@@ -31,17 +31,22 @@ function AboutMe({ loadingRemoved, isAboutMeDone }) {
       .to('.myPhoto', {
         ease: 'power3.inOut',
         opacity: 1,
-        delay: 1,
         duration: 2,
+      })
+      .to('.scrollDownLoadingText', {
+        ease: 'none',
+        opacity: 0,
+        duration: 1,
+        clipPath: "",
+        zIndex: 0,
+        onComplete: isAboutMeDone
       })
       .to('.scrollDownIcon', {
         ease: 'sine.easeOut',
         opacity: 0.7,
-        delay: 2,
         duration: 1,
         zIndex: 11,
-        onComplete: isAboutMeDone,
-      })
+      }, "<")
     return () => tl.revert()
   }, [loadingRemoved])
 
@@ -86,6 +91,9 @@ function AboutMe({ loadingRemoved, isAboutMeDone }) {
             <img src='https://picsum.photos/470/650' alt='' className='absolute w-[470px] h-[650px] clipFade myPhoto ' />
           </div>
         </div>
+      </div>
+      <div className='absolute z-20 flex items-center justify-center w-full text-xl text-center text-white opacity-100 bottom-10 font-Mitr scrollDownLoadingText'>
+        <span>Loading...<br /><span className='animate-pulse'>Scroll disabled!</span></span>
       </div>
       <div className='absolute z-0 flex items-center justify-center w-full opacity-0 bottom-10 clipFade scrollDownIcon'>
         <ScrollDownNounSvg className='animate-pulse' />
