@@ -28,6 +28,10 @@ body {
   background: yellow;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 @import 'react-tooltip/dist/react-tooltip.css';
 @import 'react-alice-carousel/lib/alice-carousel.css';
 @tailwind base;

@@ -40,19 +40,19 @@ const items = [
 
 const popupContent = "First interaction with Figma was in 2020, were i made an ugly dashboard for my soul. <br/> After 2 years, i have joined in a internal company project where i made a mockup webpage design for employees."
 
-function ScreenTwo() {
+function ScreenThree() {
     useEffect(() => {
         let ctx = gsap.context(() => {
-            gsap.to('.screenTwoContainer', {
+            gsap.to('.screenThreeContainer', {
                 ease: 'power4.inOut',
                 clipPath: 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)',
                 opacity: 1,
                 y: 0,
                 duration: 3,
                 scrollTrigger: {
-                    trigger: '.screenTwoContainer',
+                    trigger: '.screenThreeContainer',
                     scrub: 3,
-                    start: 'top 80%',
+                    start: 'top 50%',
                     end: 'top 90%',
                     toggleActions: 'play none none none',
                 },
@@ -62,7 +62,7 @@ function ScreenTwo() {
     })
     return (
         <div className='flex items-center justify-center h-full'>
-            <div className='relative flex justify-center w-full text-2xl text-white h-3/4 clipFade screenTwoContainer'>
+            <div className='relative flex justify-center w-full text-2xl text-white h-3/4 clipFade screenThreeContainer'>
                 <div className='w-4/6 h-full'>
                     <div className='flex items-center justify-end pr-20 h-1/4'>
                         <div className='flex flex-col'>
@@ -73,7 +73,7 @@ function ScreenTwo() {
                                 </div>
                             </span>
                             <span className='pt-4 text-sm text-right text-gray-500 font-Mitr reactTrigger'>
-                                I`ve come back to <span className='text-red-400 opacity-100'>Figma</span> in November 2022!
+                                I`ve come back to <span className='text-green-400 opacity-100'>Others</span> in November 2022!
                             </span>
                             <span
                                 data-tooltip-id="figmaToolTip" data-tooltip-content="Hello world!"
@@ -103,6 +103,6 @@ function ScreenTwo() {
     )
 }
 
-export default ScreenTwo
+export default ScreenThree
 
 

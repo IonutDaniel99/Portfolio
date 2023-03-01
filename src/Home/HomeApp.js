@@ -44,10 +44,10 @@ function HomeApp() {
 
     return (
         <>
-            <div className='bg-darkNotDark'>
+            <div className='bg-darkNotDark '>
                 <LoadingBarScroll />
                 <Bg2ColorsFollow />
-                <div className='z-10 overflow-y-hidden App scroll-smooth'>
+                <div className='z-10 overflow-x-hidden overflow-y-hidden App scroll-smooth'>
                     <AboutMe loadingRemoved={isLoadingRemoved} isAboutMeDone={() => isAboutMeDone()} />
                     <Experience />
                     <Projects />

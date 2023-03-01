@@ -1,6 +1,7 @@
 import gsap from 'gsap'
 import React, { useEffect, useLayoutEffect, useRef } from 'react'
 import ScreenOne from './projectsPanels/ScreenOne'
+import ScreenThree from './projectsPanels/ScreenThree'
 import ScreenTwo from './projectsPanels/ScreenTwo'
 
 function Projects() {
@@ -9,20 +10,6 @@ function Projects() {
 
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
-      let panels = gsap.utils.toArray('.panel')
-      gsap.to(panels, {
-        yPercent: -100 * (panels.length - 1),
-        ease: 'none',
-        scrollTrigger: {
-          trigger: slider.current,
-          pin: true,
-          scrub: 1,
-          snap: 1 / (panels.length - 1),
-          markers: true,
-          end: () => '+=' + slider.current.offsetHeight
-        }
-      })
-
       gsap.to('.ProjectsTitle', {
         ease: 'power4.inOut',
         clipPath: 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)',
@@ -32,9 +19,9 @@ function Projects() {
         scrollTrigger: {
           trigger: '.ProjectsTitle',
           scrub: 3,
-          start: 'top 90%',
-          end: 'top 100%',
-          toggleActions: 'restart reverse none reverse',
+          start: 'top 80%',
+          end: 'top 40%',
+          toggleActions: 'play reverse reverse restart',
         },
       })
       gsap.to('.sliderProjects', {
@@ -49,24 +36,25 @@ function Projects() {
           toggleActions: 'play none none none',
         },
       })
+
     }, component)
     return () => ctx.revert()
   })
 
   return (
     <div ref={component} className='bg-darkNotDark'>
-      <div className='flex flex-col justify-end items-center h-[270px] z-20 '>
+      <div className='z-20 flex flex-col items-center justify-end h-48'>
         <div className='z-10 text-6xl text-white ProjectsTitle clipFade font-Mitr font-medium border-b-4 border-white border-solid pb-2.5'>
           Projects
         </div>
       </div>
-      <div ref={slider} className='z-10 flex flex-row flex-wrap w-full h-screen opacity-0 sliderProjects'>
-        <div className='z-10 panel'><ScreenOne /></div>
-        <div className='z-10 panel'><ScreenTwo /></div>
-        <div className='z-10 panel'><ScreenOne /></div>
-        <div className='z-10 panel'><ScreenOne /></div>
+      <div ref={slider} className='z-10 flex flex-row flex-wrap w-full h-full sliderProjects'>
+        <div className='z-10 w-screen h-screen'><ScreenOne /></div>
+        <div className='z-10 w-screen h-screen'><ScreenTwo /></div>
+        <div className='z-10 w-screen h-screen'><ScreenThree /></div>
+        <div className='z-10 w-screen h-screen'><ScreenTwo /></div>
       </div>
-      <div className='flex h-screen bg-yellow-500'>Last Container</div>
+      <div className='flex w-screen h-screen'>Last Container</div>
     </div>
   )
 }

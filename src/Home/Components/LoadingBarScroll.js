@@ -8,23 +8,19 @@ function LoadingBarScroll() {
 
   useEffect(() => {
     window.addEventListener('scroll', () => {
-      const scrollPosition = window.scrollY
-      var limit = Math.max(
-        document.body.scrollHeight,
-        document.body.offsetHeight,
-        document.documentElement.clientHeight,
-        document.documentElement.scrollHeight,
-        document.documentElement.offsetHeight
-      )
-      const scalar = Math.round((scrollPosition / limit) * 100)
-      if (scalar > 91) {
-        setProgress(0.1)
+      var h = document.documentElement,
+        b = document.body,
+        st = 'scrollTop',
+        sh = 'scrollHeight';
+      let value = (h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight) * 100;
+      if (value >= 99.9) {
+        setProgress(99.9999)
       } else {
-        setProgress(scalar)
+        setProgress(value)
       }
     })
   }, [])
-  return <LoadingBar color='#f11946' progress={progress} />
+  return <LoadingBar color='#f11946' progress={progress} height={3} />
 }
 
 export default LoadingBarScroll

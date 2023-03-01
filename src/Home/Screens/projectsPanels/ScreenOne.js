@@ -37,23 +37,38 @@ const popupContent = "Most used libraries: Redux, Redux-Saga, Ramda, i18n, Style
 
 function ScreenOne() {
   useEffect(() => {
-    let xl = gsap.to('.bgScroll', {
-      ease: 'power4.inOut',
-      opacity: 0,
-      duration: 3,
-      scrollTrigger: {
-        trigger: '.reactTrigger',
-        start: 'top 50%',
-        end: 'top 70%',
-      },
+    let ctx = gsap.context(() => {
+      gsap.to('.bgScroll', {
+        ease: 'power4.inOut',
+        opacity: 0,
+        duration: 3,
+        scrollTrigger: {
+          trigger: '.reactTrigger',
+          start: 'top 50%',
+          end: 'top 70%',
+        },
+      })
+      gsap.to('.screenOneContainer', {
+        ease: 'power4.inOut',
+        clipPath: 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)',
+        opacity: 1,
+        y: 0,
+        duration: 2.2,
+        scrollTrigger: {
+          trigger: '.screenOneContainer',
+          scrub: 3,
+          start: 'top 70%',
+          end: 'top 90%',
+          toggleActions: 'play none none none',
+        },
+      })
     })
-
-    return () => xl.reverse()
+    return () => ctx.revert()
   })
 
   return (
     <div className='flex items-center justify-center h-full'>
-      <div className='relative flex justify-center w-full text-2xl text-white h-3/4'>
+      <div className='relative flex justify-center w-full text-2xl text-white h-3/4 clipFade screenOneContainer'>
         <div className='w-4/6 h-full'>
           <div className='flex items-center justify-end pr-20 h-1/4'>
             <div className='flex flex-col'>
@@ -78,8 +93,8 @@ function ScreenOne() {
           <div className='relative w-full select-none top-10'>
             <div className='absolute top-0 z-10 w-full h-full pointer-events-none bgScroll'>
               <span className='absolute w-full h-full bg-darkNotDark opacity-70'></span>
-              <span className='absolute flex items-center justify-center w-full h-full text-4xl text-gray-200 font-Mitr'>
-                Scroll to right using your mouse or finger!
+              <span className='absolute flex items-center justify-center w-full h-full text-3xl text-gray-200 font-Mitr'>
+                Scroll to right in this <span className='px-2 underline'> area </span> using your mouse or finger!
               </span>
             </div>
             <AliceCarousel

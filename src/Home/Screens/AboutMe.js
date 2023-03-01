@@ -71,7 +71,7 @@ function AboutMe({ loadingRemoved, isAboutMeDone }) {
 
   return (
     <>
-      <div className='relative z-10 flex justify-between w-screen h-screen text-white font-Mitr aboutMe'>
+      <div className='relative z-10 flex justify-between w-screen h-screen text-white font-Mitr aboutMe '>
         <div className='flex items-center justify-center w-full gap-20 z-[3]'>
           <div className='flex flex-col gap-16 -mt-24'>
             <p className='font-semibold tracking-wider text-9xl min-w-[1000px] clipFade myName'>Hi, I`m DANIEL</p>
