@@ -52,8 +52,8 @@ function ScreenTwo() {
                 scrollTrigger: {
                     trigger: '.screenTwoContainer',
                     scrub: 3,
-                    start: 'top 80%',
-                    end: 'top 90%',
+                    start: 'top 90%',
+                    end: 'top 100%',
                     toggleActions: 'play none none none',
                 },
             })

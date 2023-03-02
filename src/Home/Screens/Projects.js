@@ -6,7 +6,6 @@ import ScreenTwo from './projectsPanels/ScreenTwo'
 
 function Projects() {
   const component = useRef()
-  const slider = useRef()
 
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
@@ -42,13 +41,13 @@ function Projects() {
   })
 
   return (
-    <div ref={component} className='bg-darkNotDark'>
+    <div ref={component}>
       <div className='z-20 flex flex-col items-center justify-end h-48'>
         <div className='z-10 text-6xl text-white ProjectsTitle clipFade font-Mitr font-medium border-b-4 border-white border-solid pb-2.5'>
           Projects
         </div>
       </div>
-      <div ref={slider} className='z-10 flex flex-row flex-wrap w-full h-full sliderProjects'>
+      <div className='z-10 flex flex-row flex-wrap w-full h-full sliderProjects'>
         <div className='z-10 w-screen h-screen'><ScreenOne /></div>
         <div className='z-10 w-screen h-screen'><ScreenTwo /></div>
         <div className='z-10 w-screen h-screen'><ScreenThree /></div>

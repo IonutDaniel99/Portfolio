@@ -1,4 +1,4 @@
-import gsap from 'gsap'
+import gsap, { Power2 } from 'gsap'
 import React, { useEffect, useRef, useState } from 'react'
 import Bg2ColorsFollow from './Components/Bg2ColorsFollow'
 import AboutMe from './Screens/AboutMe'
@@ -7,57 +7,32 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Projects from './Screens/Projects'
 import disableScroll from 'disable-scroll'
 import LoadingBarScroll from './Components/LoadingBarScroll'
+import ScrollSmoother from 'gsap-trial/ScrollSmoother'
+import { useLayoutEffect } from 'react'
+import SmoothScroll from './Components/SmoothScroll'
 
 export default HomeApp
 
 gsap.registerPlugin(ScrollTrigger)
-function HomeApp() {
-    const [isLoadingRemoved, setIsLoadingRemoved] = useState(false)
-    const loadingRef = useRef(null)
-    disableScroll.on()
 
+function HomeApp() {
+    disableScroll.on()
     const isAboutMeDone = () => {
         disableScroll.off()
     }
 
-    useEffect(() => {
-        let ctx = gsap.context(() => {
-            gsap.fromTo(
-                '.loadingScreen',
-                {
-                    ease: 'none',
-                    opacity: 1,
-                },
-                {
-                    ease: 'none',
-                    opacity: 0,
-                    duration: 2.8,
-                    onComplete: () => {
-                        loadingRef.current.remove()
-                        setIsLoadingRemoved(true)
-                    },
-                }
-            )
-        })
-        return () => ctx.revert()
-    }, [])
-
     return (
         <>
-            <div className='bg-darkNotDark '>
+            <div >
+                <div className='fixed w-screen h-screen bg-darkNotDark'></div>
                 <LoadingBarScroll />
                 <Bg2ColorsFollow />
-                <div className='z-10 overflow-x-hidden overflow-y-hidden App scroll-smooth'>
-                    <AboutMe loadingRemoved={isLoadingRemoved} isAboutMeDone={() => isAboutMeDone()} />
+                <SmoothScroll>
+                    <AboutMe isAboutMeDone={() => isAboutMeDone()} />
                     <Experience />
                     <Projects />
-                    {/* <div className="lastContainer">Last Container</div> */}
-                </div>
-            </div>
-            <div
-                ref={loadingRef}
-                className='absolute z-[200] text-2xl h-screen w-full bg-[#1B1D1E] overflow-hidden loadingScreen top-0 text-white flex justify-center items-center'
-            >
+                </SmoothScroll>
+                {/* <div className="lastContainer">Last Container</div> */}
             </div>
         </>
     )

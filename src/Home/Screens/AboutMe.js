@@ -3,9 +3,8 @@ import ScrollTrigger from 'gsap/ScrollTrigger'
 import React, { useEffect } from 'react'
 import ScrollDownNounSvg from '../Icons/ScrollDownNounSvg'
 
-function AboutMe({ loadingRemoved, isAboutMeDone }) {
+function AboutMe({ isAboutMeDone }) {
   useEffect(() => {
-    if (!loadingRemoved) return
     let tl = gsap.timeline({
       defaults: {
         ease: 'power3.inOut',
@@ -48,14 +47,14 @@ function AboutMe({ loadingRemoved, isAboutMeDone }) {
         zIndex: 11,
       }, "<")
     return () => tl.revert()
-  }, [loadingRemoved])
+  }, [])
 
   useEffect(() => {
     let ctx = gsap.context(() => {
       gsap.to('.scrollDownIcon', {
         ease: 'none',
         opacity: 0,
-        duration: 2,
+        duration: 1.5,
         clipPath: 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)',
         scrollTrigger: {
           trigger: '.aboutMe',
@@ -71,7 +70,7 @@ function AboutMe({ loadingRemoved, isAboutMeDone }) {
 
   return (
     <>
-      <div className='relative z-10 flex justify-between w-screen h-screen text-white font-Mitr aboutMe '>
+      <div className='relative z-10 flex justify-between w-screen h-screen text-white font-Mitr aboutMe'>
         <div className='flex items-center justify-center w-full gap-20 z-[3]'>
           <div className='flex flex-col gap-16 -mt-24'>
             <p className='font-semibold tracking-wider text-9xl min-w-[1000px] clipFade myName'>Hi, I`m DANIEL</p>
@@ -92,11 +91,13 @@ function AboutMe({ loadingRemoved, isAboutMeDone }) {
           </div>
         </div>
       </div>
-      <div className='absolute z-20 flex items-center justify-center w-full text-xl text-center text-white opacity-100 bottom-10 font-Mitr scrollDownLoadingText'>
-        <span>Loading...<br /><span className='animate-pulse'>Scroll disabled!</span></span>
-      </div>
-      <div className='absolute z-0 flex items-center justify-center w-full opacity-0 bottom-10 clipFade scrollDownIcon'>
-        <ScrollDownNounSvg className='animate-pulse' />
+      <div className='relative'>
+        <div className='absolute z-20 flex items-center justify-center w-full text-xl text-center text-white opacity-100 bottom-10 font-Mitr scrollDownLoadingText'>
+          <span>Loading...<br /><span className='animate-pulse'>Scroll disabled!</span></span>
+        </div>
+        <div className='absolute z-0 flex items-center justify-center w-full opacity-0 bottom-10 clipFade scrollDownIcon'>
+          <ScrollDownNounSvg className='animate-pulse' />
+        </div>
       </div>
     </>
   )

@@ -52,8 +52,8 @@ function ScreenThree() {
                 scrollTrigger: {
                     trigger: '.screenThreeContainer',
                     scrub: 3,
-                    start: 'top 50%',
-                    end: 'top 90%',
+                    start: 'top 90%',
+                    end: 'top 100%',
                     toggleActions: 'play none none none',
                 },
             })
