@@ -75,7 +75,7 @@ function ScreenOne() {
               <span className='relative float-right h-full '>
                 <div className='flex items-center justify-end h-full gap-4'>
                   <p className='text-4xl font-Mitr'>React</p>
-                  <img src='/Images/Home/React.png' alt='' className='w-20 h-20' />
+                  <img src='/Images/Home/Icons/React.png' alt='' className='w-20 h-20' />
                 </div>
               </span>
               <span className='pt-4 text-sm text-gray-500 font-Mitr reactTrigger'>

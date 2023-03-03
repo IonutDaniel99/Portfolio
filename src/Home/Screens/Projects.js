@@ -48,10 +48,10 @@ function Projects() {
         </div>
       </div>
       <div className='z-10 flex flex-row flex-wrap w-full h-full sliderProjects'>
-        <div className='z-10 w-screen h-screen'><ScreenOne /></div>
-        <div className='z-10 w-screen h-screen'><ScreenTwo /></div>
-        <div className='z-10 w-screen h-screen'><ScreenThree /></div>
-        <div className='z-10 w-screen h-screen'><ScreenTwo /></div>
+        <div className='z-10 w-screen min-h-[800px]'><ScreenOne /></div>
+        <div className='z-10 w-screen min-h-[800px]'><ScreenTwo /></div>
+        <div className='z-10 w-screen min-h-[800px]'><ScreenThree /></div>
+        <div className='z-10 w-screen min-h-[800px]'><ScreenTwo /></div>
       </div>
       <div className='flex w-screen h-screen'>Last Container</div>
     </div>

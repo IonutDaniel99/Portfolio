@@ -16,19 +16,19 @@ const items = [
         year={'Nov 2022'}
         description={'My first mockup webpage design for the company i have worked at that time!'}
         imagePath={'/Images/Home/FigmaBookingApp.png'}
-        externalLink='https://www.figma.com/file/twErNtJeSSPDBTtgYSwuCW/My-Figma-Projects?node-id=26%3A10&t=iR1E5X8f0ljensV0-1'
+        externalLink='https://dribbble.com/shots/20811284-UI-Dashboard-for-Endava-company'
     />,
     <CarouselItem
         year={'Dec 2022'}
         description={'Various details cards.'}
         imagePath={'/Images/Home/FigmaCards.png'}
-        externalLink='https://www.figma.com/file/twErNtJeSSPDBTtgYSwuCW/My-Figma-Projects?node-id=23%3A10&t=iR1E5X8f0ljensV0-1'
+        externalLink='https://dribbble.com/shots/20811210-League-of-Legends-Champion-Cards'
     />,
     <CarouselItem
         year={'Dec 2022'}
         description={'Mazda 3 Presentation Site'}
         imagePath={'/Images/Home/FigmaMazda.png'}
-        externalLink='https://www.figma.com/file/twErNtJeSSPDBTtgYSwuCW/My-Figma-Projects?node-id=23%3A152&t=iR1E5X8f0ljensV0-1'
+        externalLink='https://dribbble.com/shots/20811274-Mazda-3-presentation-webpage'
     />,
     <CarouselItem
         year={'Feb 2023'}
@@ -69,7 +69,7 @@ function ScreenTwo() {
                             <span className='relative float-right h-full '>
                                 <div className='flex items-center justify-end h-full gap-4'>
                                     <p className='text-4xl font-Mitr'>Figma</p>
-                                    <img src='/Images/Home/Figma.png' alt='' className='w-20 h-20' />
+                                    <img src='/Images/Home/Icons/Figma.png' alt='' className='w-20 h-20' />
                                 </div>
                             </span>
                             <span className='pt-4 text-sm text-right text-gray-500 font-Mitr reactTrigger'>

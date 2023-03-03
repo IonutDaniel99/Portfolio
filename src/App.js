@@ -1,6 +1,7 @@
 import { BrowserRouter, NavLink, Route, Routes, useLocation } from 'react-router-dom'
 import HomeApp from './Home/HomeApp'
 import Projects from './Home/Screens/Projects'
+import ScreenThree from './Home/Screens/projectsPanels/ScreenThree'
 import CardsApp from './Projects/FromDesignToCode/Cards/CardsApp'
 import IndonesiaApp from './Projects/FromDesignToCode/Indonesia/IndonesiaApp'
 import MazdaRx8Main from './Projects/MazdaRx8/MazdaRx8Main'
@@ -13,7 +14,7 @@ function App() {
         <Route path='/Projects/FromDesignToCode/Indonesia' element={<IndonesiaApp />}></Route>
         <Route path='/Projects/FromDesignToCode/Cards' element={<CardsApp />}></Route>
         <Route path='/Projects/MazdaRx8' element={<MazdaRx8Main />}></Route>
-        <Route path='/Projects/porto' element={<Projects />}></Route>
+        <Route path='/Projects/porto' element={<ScreenThree />}></Route>
       </Routes>
       <BackToPortfolio />
     </BrowserRouter>

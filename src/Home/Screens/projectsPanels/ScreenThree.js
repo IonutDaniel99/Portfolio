@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import { useEffect } from 'react'
 import AliceCarousel from 'react-alice-carousel'
 import { Tooltip } from 'react-tooltip'
+import IconsTooltip from '../../Components/IconsTooltip'
 import CarouselItem from './CarouselItem'
 
 const responsive = {
@@ -41,6 +42,7 @@ const items = [
 const popupContent = "First interaction with Figma was in 2020, were i made an ugly dashboard for my soul. <br/> After 2 years, i have joined in a internal company project where i made a mockup webpage design for employees."
 
 function ScreenThree() {
+
     useEffect(() => {
         let ctx = gsap.context(() => {
             gsap.to('.screenThreeContainer', {
@@ -60,27 +62,47 @@ function ScreenThree() {
         })
         return () => ctx.revert()
     })
+
     return (
         <div className='flex items-center justify-center h-full'>
             <div className='relative flex justify-center w-full text-2xl text-white h-3/4 clipFade screenThreeContainer'>
                 <div className='w-4/6 h-full'>
                     <div className='flex items-center justify-end pr-20 h-1/4'>
                         <div className='flex flex-col'>
-                            <span className='relative float-right h-full '>
+                            <span className='relative flex flex-col float-right h-full gap-4'>
                                 <div className='flex items-center justify-end h-full gap-4'>
-                                    <p className='text-4xl font-Mitr'>Figma</p>
-                                    <img src='/Images/Home/Figma.png' alt='' className='w-20 h-20' />
+                                    <p className='text-4xl font-Mitr'>Other skills in my deck!</p>
+                                </div>
+                                <div className='flex items-center justify-end w-full gap-2'>
+                                    <IconsTooltip iconName={"Php"} iconPath={"/Images/Home/Icons/php.png"} isDark={false} />
+                                    <IconsTooltip iconName={"Python"} iconPath={"/Images/Home/Icons/python.png"} isDark={false} />
+                                    <span className='w-[2px] h-6 bg-gray-700 rounded-xl mx-2' />
+                                    <IconsTooltip iconName={"Laravel"} iconPath={"/Images/Home/Icons/laravel.png"} isDark={false} />
+                                    <IconsTooltip iconName={"NodeJs"} iconPath={"/Images/Home/Icons/node.png"} isDark={false} />
+                                    <span className='w-[2px] h-6 bg-gray-700 rounded-xl mx-2' />
+                                    <IconsTooltip iconName={"Unity"} iconPath={"/Images/Home/Icons/unity.png"} isDark={true} />
+                                    <IconsTooltip iconName={"Unreal Engine"} iconPath={"/Images/Home/Icons/unreal.png"} isDark={true} />
+                                    <span className='w-[2px] h-6 bg-gray-700 rounded-xl mx-2' />
+                                    <IconsTooltip iconName={"Git (Gitlab & Github)"} iconPath={"/Images/Home/Icons/git.png"} isDark={false} />
+                                    <IconsTooltip iconName={"Azure Devops"} iconPath={"/Images/Home/Icons/azure.png"} isDark={false} />
+                                    <span className='w-[2px] h-6 bg-gray-700 rounded-xl mx-2' />
+                                    <IconsTooltip iconName={"React Native (Android)"} iconPath={"/Images/Home/Icons/reactN.png"} isDark={false} />
+                                    <IconsTooltip iconName={"Solid Js"} iconPath={"/Images/Home/Icons/solid.png"} isDark={false} />
+                                    <IconsTooltip iconName={"Three Js"} iconPath={"/Images/Home/Icons/three.png"} isDark={true} />
+                                    <IconsTooltip iconName={"Tailwind Css"} iconPath={"/Images/Home/Icons/tailwind.png"} isDark={false} />
+                                    <span className='w-[2px] h-6 bg-gray-700 rounded-xl mx-2' />
+                                    <img src={"/Images/Home/Icons/dots.png"} alt='' className='object-contain w-6 h-6 mx-1 invert' data-tooltip-id='threeDotsList' />
+                                    <Tooltip id='threeDotsList' html='This list expand constantly as i try to learn something new everyday!' place="right" className='text-sm font-Mitr' />
                                 </div>
                             </span>
-                            <span className='pt-4 text-sm text-right text-gray-500 font-Mitr reactTrigger'>
-                                I`ve come back to <span className='text-green-400 opacity-100'>Others</span> in November 2022!
+                            <span className='pt-4 text-sm text-right text-gray-500 font-Mitr' data-tooltip-id='lowExperience'>
+                                All my interactions from
+                                <span className='text-green-400 opacity-100'>&nbsp;2012&nbsp;</span>
+                                to<span className='text-green-400 opacity-100'>&nbsp;Present&nbsp;</span>with others
+                                <br />
+                                <span className='text-gray-500 underline underline-offset-4'>programming languages, frameworks, versioning systems or libraries!</span>
                             </span>
-                            <span
-                                data-tooltip-id="figmaToolTip" data-tooltip-content="Hello world!"
-                                className='text-sm text-right text-gray-500 underline cursor-pointer font-Mitr reactTrigger underline-offset-2'>
-                                Hover here for short story!
-                                <Tooltip id="figmaToolTip" html={popupContent} place="left" />
-                            </span>
+                            <Tooltip id='lowExperience' html='I am not an expert in those mentioned above. However, I have used it to gain some understanding and develop ideas.' place="bottom" className='text-sm font-Mitr' />
                         </div>
                     </div>
                     <div className='relative w-full select-none top-10'>
@@ -98,7 +120,6 @@ function ScreenThree() {
                     </div>
                 </div>
             </div>
-
         </div>
     )
 }
