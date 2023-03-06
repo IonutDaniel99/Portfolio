@@ -67,9 +67,9 @@ function ScreenOne() {
   })
 
   return (
-    <div className='flex items-center justify-center h-full'>
+    <div className='flex items-center  h-full tablet:justify-center'>
       <div className='relative flex justify-center w-full text-2xl text-white h-3/4 clipFade screenOneContainer'>
-        <div className='w-4/6 h-full'>
+        <div className='h-full mobile:w-full tablet:w-4/6'>
           <div className='flex items-center justify-end pr-20 h-1/4
           mobile:pr-0 mobile:justify-center
           tablet:justify-end

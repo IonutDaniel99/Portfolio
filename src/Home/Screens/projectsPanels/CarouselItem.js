@@ -3,7 +3,7 @@ const handleDragStart = (e) => e.preventDefault()
 
 function CarouselItem({ year, description, imagePath, shouldHaveBorder, externalLink, isReset, handleReset }) {
   return (
-    <div className='cursor-pointer group w-[375px]' onDragStart={handleDragStart} onClick={handleReset}>
+    <div className='cursor-pointer group mobile:w-72 tablet:w-[375px]' onDragStart={handleDragStart} onClick={handleReset}>
       <div className='flex items-center justify-center w-[375px] h-20 font-Mitr text-xl opacity-20 group-hover:opacity-100  group-hover:text-white duration-700'>
         {year}
       </div>
