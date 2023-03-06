@@ -92,6 +92,7 @@ function ScreenTwo() {
                             animationType='slide'
                             animationDuration={800}
                             paddingRight={50}
+                            paddingLeft={50}
                             disableButtonsControls
                             disableDotsControls
                         />

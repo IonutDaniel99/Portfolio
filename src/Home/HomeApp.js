@@ -23,17 +23,15 @@ function HomeApp() {
 
     return (
         <>
-            <div >
-                <div className='fixed w-screen h-screen bg-darkNotDark'></div>
-                <LoadingBarScroll />
-                <Bg2ColorsFollow />
-                <SmoothScroll>
-                    <AboutMe isAboutMeDone={() => isAboutMeDone()} />
-                    <Experience />
-                    <Projects />
-                </SmoothScroll>
-                {/* <div className="lastContainer">Last Container</div> */}
-            </div>
+            <div className='fixed w-screen h-screen bg-darkNotDark'></div>
+            <LoadingBarScroll />
+            <Bg2ColorsFollow />
+            <SmoothScroll>
+                <AboutMe isAboutMeDone={() => isAboutMeDone()} />
+                <Experience />
+                <Projects />
+            </SmoothScroll>
+            {/* <div className="lastContainer">Last Container</div> */}
         </>
     )
 }

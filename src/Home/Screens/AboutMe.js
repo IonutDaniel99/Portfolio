@@ -46,10 +46,8 @@ function AboutMe({ isAboutMeDone }) {
         duration: 1,
         zIndex: 11,
       }, "<")
-    return () => tl.revert()
-  }, [])
 
-  useEffect(() => {
+
     let ctx = gsap.context(() => {
       gsap.to('.scrollDownIcon', {
         ease: 'none',
@@ -65,29 +63,66 @@ function AboutMe({ isAboutMeDone }) {
         },
       })
     })
-    return () => ctx.revert()
+    return () => [tl.revert(), ctx.revert()]
+  }, [])
+
+  useEffect(() => {
+
   })
 
   return (
     <>
       <div className='relative z-10 flex justify-between w-screen h-screen text-white font-Mitr aboutMe'>
-        <div className='flex items-center justify-center w-full gap-20 z-[3]'>
-          <div className='flex flex-col gap-16 -mt-24'>
-            <p className='font-semibold tracking-wider text-9xl min-w-[1000px] clipFade myName'>Hi, I`m DANIEL</p>
-            <h2 className='text-32 min-w-[1000px] clipFade myHobby'>
-              Front-end developer with a passion for games <br />
+        <div className='flex items-center flex-col w-full gap-8 z-[3]
+        mobile:mt-10 mobile:justify-start
+        tablet:flex-row tablet:mt-0 tablet:gap-0 tablet:justify-center tablet:ml-10
+        laptop:justify-center laptop:w-full laptop:mx-16
+        '>
+          <div className='flex flex-col gap-8
+            mobile:mt-0
+            tablet:mt-0 tablet:w-[400px] tablet:gap-16 tablet:ml-2
+            laptop:mt-0 laptop:w-1/2'>
+            <p className='w-full text-4xl font-semibold tracking-wider clipFade myName 
+            tablet:text-5xl tablet:w-full
+            laptop:text-7xl laptop:w-full
+            desktop:text-7xl 
+            '
+            >Hi, I`m DANIEL</p>
+            <h2 className='text-base clipFade myHobby
+             mobile:w-96 
+             tablet:text-lg tablet:w-full
+             laptop:text-2xl laptop:w-[645px]
+             desktop:text-3xl desktop:w-[800px]
+            '>
+              Front-end developer with a passion for games
               and for graphical environments that captivates the eyes.
             </h2>
-            <h2 className='text-32 min-w-[1000px] clipFade myTime'>
+            <h2 className='text-base clipFade myTime
+             mobile:w-96
+             tablet:text-lg tablet:w-full
+             laptop:text-2xl laptop:w-[645px]
+             desktop:text-3xl desktop:w-[800px]
+            '>
               I`m currently based in Romania, <br />
               and I pursuit a Master's degree in Computer Science.
             </h2>
           </div>
-          <div className='w-[470px] h-[650px] ml-10 myPhoto relative '>
-            <p className='absolute flex items-center justify-center w-full h-full text-2xl text-center opacity-0 thisIsMe'>
+          <div className='myPhoto relative flex justify-center
+          mobile:w-[470px] mobile:h-[400px] 
+          tablet:w-[450px] tablet:h-[650px] tablet:items-center
+          laptop:w-1/2 laptop:h-[650px]
+          '>
+            <p className='absolute flex items-center justify-center h-full text-base text-center opacity-0 thisIsMe
+             tablet:text-base tablet:w-3/4
+             laptop:text-2xl
+             desktop:text-3xl'>
               And this is a photo with me! 😄
             </p>
-            <img src='https://picsum.photos/470/650' alt='' className='absolute w-[470px] h-[650px] clipFade myPhoto ' />
+            <img src='/Images/Home/PhotoWithMe.png' alt='' className='absolute clipFade myPhoto 
+             mobile:w-7/12 mobile:h-[360px]
+             tablet:w-[280px] tablet:h-[360px]
+             laptop:w-[340px] laptop:h-[450px]
+            ' />
           </div>
         </div>
       </div>

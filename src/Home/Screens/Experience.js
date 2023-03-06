@@ -3,6 +3,27 @@ import ScrollTrigger from 'gsap/ScrollTrigger'
 import React, { useEffect } from 'react'
 
 function Experience() {
+
+  const generateDate = () => {
+    const employedDate = new Date("May 05, 2021")
+    const today = new Date()
+
+    var diffDays = today - employedDate;
+
+    const diffYears = Math.floor(diffDays / (1000 * 60 * 60 * 24 * 365));
+    const diffMonths = Math.floor((diffDays % (1000 * 60 * 60 * 24 * 365)) / (1000 * 60 * 60 * 24 * 30) + 1);
+
+    // Construct the output string
+    var output;
+
+    if (diffYears === 1) {
+      output = `${diffYears} Year ${diffMonths} Months`
+    } else {
+      output = `${diffYears} Years ${diffMonths} Months`
+    }
+    return output
+  }
+
   useEffect(() => {
     let ctx = gsap.context(() => {
       gsap.to('.experienceTitle', {
@@ -51,18 +72,36 @@ function Experience() {
     return () => ctx.revert()
   }, [])
   return (
-    <div className='flex flex-col items-center w-screen h-1/2 experience'>
-      <div className='z-10 pt-20 text-6xl text-white experienceTitle clipFade font-Mitr font-medium border-b-4 border-white border-solid pb-2.5'>
+    <div className='flex flex-col items-center w-screen h-1/2 experience
+      mobile:mb-40 mobile:w-full 
+      tablet:px-4 tablet:mb-0
+     '>
+      <div className='z-10 pt-20 text-white experienceTitle clipFade font-Mitr font-medium border-b-4 text-4xl border-white border-solid pb-2.5
+        laptop:text-5xl
+      '>
         Work Experience
       </div>
-      <div className='z-10 flex items-center pt-20 justify-evenly h-1/2 '>
-        <div className='w-2/6 text-2xl text-white title1 clipFade'>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-          veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-          voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-          deserunt mollit anim id est laborum.
+      <div className='z-10 flex items-center pt-20 justify-between h-96
+      mobile:flex-col mobile:gap-20 mobile:w-full
+      tablet:flex-row tablet:gap-4 tablet:w-full
+      laptop:justify-around laptop:w-3/4
+      '>
+        <div className='text-base text-white title1 clipFade flex flex-col font-Mitr gap-2
+        mobile:px-2.5 mobile:w-full 
+        tablet:text-lg tablet:w-8/12
+        laptop:w-2/4
+        '>
+          <span>Company: <span className='text-orange-500 underline underline-offset-4'>Endava</span></span>
+          <span>Location: Pitesti, Romania</span>
+          <span>Employed: May 2021 - Present · ({generateDate()})</span>
+          <span>Current project: Banking services where we develop a <span className='text-blue-400'>ReactJS</span> web application for trading!</span>
         </div>
-        <img src='https://picsum.photos/470/650' alt='' className='w-[400px] h-[200px] companyPic clipFade' />
+        <img src='/Images/Home/Endava.jpg' alt='' className='h-2/4 object-cover rounded-xl companyPic clipFade
+        mobile:w-10/12 mobile:px-2.5
+        tablet:w-4/12
+        laptop:w-2/4 laptop:h-3/4
+        desktop:h-[200px] desktop:w-2/6
+        ' />
       </div>
     </div>
   )

@@ -2,6 +2,12 @@
 module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
+    screens: {
+      'mobile': '425px',
+      'tablet': '768px',
+      'laptop': '1366px',
+      'desktop': '1920px',
+    },
     fontFamily: {
       AlexBrush: ['Alex Brush', 'cursive'],
       BebasNeue: ['Bebas Neue', 'cursive'],

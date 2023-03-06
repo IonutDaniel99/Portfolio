@@ -43,7 +43,7 @@ function Projects() {
   return (
     <div ref={component}>
       <div className='z-20 flex flex-col items-center justify-end h-48'>
-        <div className='z-10 text-6xl text-white ProjectsTitle clipFade font-Mitr font-medium border-b-4 border-white border-solid pb-2.5'>
+        <div className='z-10 text-5xl text-white ProjectsTitle clipFade font-Mitr font-medium border-b-4 border-white border-solid pb-2.5'>
           Projects
         </div>
       </div>
@@ -51,9 +51,7 @@ function Projects() {
         <div className='z-10 w-screen min-h-[800px]'><ScreenOne /></div>
         <div className='z-10 w-screen min-h-[800px]'><ScreenTwo /></div>
         <div className='z-10 w-screen min-h-[800px]'><ScreenThree /></div>
-        <div className='z-10 w-screen min-h-[800px]'><ScreenTwo /></div>
       </div>
-      <div className='flex w-screen h-screen'>Last Container</div>
     </div>
   )
 }

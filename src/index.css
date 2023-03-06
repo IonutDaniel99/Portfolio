@@ -32,6 +32,10 @@ body {
   display: none;
 }
 
+.alice-carousel__dots {
+  margin: 0;
+}
+
 @import 'react-tooltip/dist/react-tooltip.css';
 @import 'react-alice-carousel/lib/alice-carousel.css';
 @tailwind base;
