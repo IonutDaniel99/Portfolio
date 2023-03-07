@@ -6,9 +6,10 @@ import { Tooltip } from 'react-tooltip'
 import CarouselItem from './CarouselItem'
 
 const responsive = {
-    0: { items: 1 },
-    568: { items: 2 },
-    1024: { items: 3 },
+    425: { items: 1 },
+    1024: { items: 2 },
+    1366: { items: 2 },
+    1800: { items: 3 },
 }
 
 const items = [
@@ -38,9 +39,10 @@ const items = [
     />,
 ]
 
-const popupContent = "First interaction with Figma was in 2020, were i made an ugly dashboard for my soul. <br/> After 2 years, i have joined in a internal company project where i made a mockup webpage design for employees."
+const popupContent = "First interaction with Figma was in 2020, were i made an ugly dashboard for my soul. After 2 years, i have joined in a internal company project where i made a mockup webpage design for employees."
 
 function ScreenTwo() {
+
     useEffect(() => {
         let ctx = gsap.context(() => {
             gsap.to('.screenTwoContainer', {
@@ -60,26 +62,40 @@ function ScreenTwo() {
         })
         return () => ctx.revert()
     })
+
     return (
-        <div className='flex items-center justify-center h-full'>
+        <div className='flex items-center tablet:justify-center h-full'>
             <div className='relative flex justify-center w-full text-2xl text-white h-3/4 clipFade screenTwoContainer'>
-                <div className='w-4/6 h-full'>
-                    <div className='flex items-center justify-end pr-20 h-1/4'>
+                <div className='h-full mobile:w-full tablet:w-4/6'>
+                    <div className='flex items-center justify-end pr-20 h-1/4
+                                    mobile:pr-0 mobile:justify-center
+                                    tablet:justify-end
+                                    desktop:pr-20
+                                    '>
                         <div className='flex flex-col'>
                             <span className='relative float-right h-full '>
-                                <div className='flex items-center justify-end h-full gap-4'>
+                                <div className='flex items-center justify-end h-full gap-4 mobile:justify-center tablet:justify-end'>
                                     <p className='text-4xl font-Mitr'>Figma</p>
                                     <img src='/Images/Home/Icons/Figma.png' alt='' className='w-20 h-20' />
                                 </div>
                             </span>
-                            <span className='pt-4 text-sm text-right text-gray-500 font-Mitr reactTrigger'>
+                            <span className='pt-4 text-gray-500 font-Mitr reactTrigger
+                                                mobile:text-center mobile:text-lg
+                                                tablet:text-right tablet:text-lg'>
                                 I`ve come back to <span className='text-red-400 opacity-100'>Figma</span> in November 2022!
                             </span>
                             <span
                                 data-tooltip-id="figmaToolTip" data-tooltip-content="Hello world!"
-                                className='text-sm text-right text-gray-500 underline cursor-pointer font-Mitr reactTrigger underline-offset-2'>
+                                className='text-right text-gray-500 z-50 underline cursor-pointer font-Mitr reactTrigger underline-offset-2 
+                                            mobile:text-center mobile:text-base
+                                            tablet:text-right tablet:text-base'>
                                 Hover here for short story!
-                                <Tooltip id="figmaToolTip" html={popupContent} place="left" />
+                                <Tooltip id="figmaToolTip" html={popupContent} place={window.innerWidth <= 768 ? 'bottom' : 'left'}
+                                    className='
+                                        mobile:w-96 mobile:h-fit mobile:flex mobile:items-center
+                                        tablet:w-80 tablet:h-fit tablet:flex tablet:items-center tablet:pt-2
+                                        laptop:w-1/4
+                                        desktop:w-2/6'/>
                             </span>
                         </div>
                     </div>

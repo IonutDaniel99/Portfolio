@@ -77,11 +77,12 @@ function AboutMe({ isAboutMeDone }) {
         mobile:mt-10 mobile:justify-start
         tablet:flex-row tablet:mt-0 tablet:gap-0 tablet:justify-center tablet:ml-10
         laptop:justify-center laptop:w-full laptop:mx-16
+        desktop:justify-evenly
         '>
           <div className='flex flex-col gap-8
             mobile:mt-0
             tablet:mt-0 tablet:w-[400px] tablet:gap-16 tablet:ml-2
-            laptop:mt-0 laptop:w-1/2'>
+            laptop:mt-0 laptop:w-[600px]'>
             <p className='w-full text-4xl font-semibold tracking-wider clipFade myName 
             tablet:text-5xl tablet:w-full
             laptop:text-7xl laptop:w-full
@@ -111,6 +112,7 @@ function AboutMe({ isAboutMeDone }) {
           mobile:w-[470px] mobile:h-[400px] 
           tablet:w-[450px] tablet:h-[650px] tablet:items-center
           laptop:w-1/2 laptop:h-[650px]
+          desktop:w-[500px]
           '>
             <p className='absolute flex items-center justify-center h-full text-base text-center opacity-0 thisIsMe
              tablet:text-base tablet:w-3/4
@@ -122,6 +124,7 @@ function AboutMe({ isAboutMeDone }) {
              mobile:w-7/12 mobile:h-[360px]
              tablet:w-[280px] tablet:h-[360px]
              laptop:w-[340px] laptop:h-[450px]
+             desktop:w-[400px] desktop:h-[550px]
             ' />
           </div>
         </div>
