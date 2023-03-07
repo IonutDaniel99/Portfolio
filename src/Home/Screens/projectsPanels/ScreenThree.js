@@ -72,8 +72,8 @@ function ScreenThree() {
                                     desktop:pr-20'>
                         <div className='flex flex-col'>
                             <span className='relative flex flex-col float-right h-full gap-4 w-full'>
-                                <div className='flex items-center justify-end h-full gap-4'>
-                                    <p className='text-3xl tablet:text-4xl font-Mitr'>Other skills in my deck!</p>
+                                <div className='flex items-center mobile:justify-center tablet:justify-end h-full gap-4'>
+                                    <p className='text-4xl tablet:text-4xl font-Mitr pb-4'>Other skills in my deck!</p>
                                 </div>
                                 <div className='flex gap-1 items-center justify-center overflow-x-scroll tablet:gap-2'>
                                     <IconsTooltip iconName={"Php"} iconPath={"/Images/Home/Icons/php.png"} isDark={false} />
@@ -94,17 +94,18 @@ function ScreenThree() {
                                     <IconsTooltip iconName={"Tailwind Css"} iconPath={"/Images/Home/Icons/tailwind.png"} isDark={false} />
                                     <span className='w-[2px] h-6 bg-gray-400 rounded-xl mx-2' />
                                     <img src={"/Images/Home/Icons/dots.png"} alt='' className='object-contain w-6 h-6 mx-1 invert' data-tooltip-id='threeDotsList' />
-                                    <Tooltip id='threeDotsList' html='This list expand constantly as i try to learn something new everyday!' place="right" className='text-sm font-Mitr' />
+                                    <Tooltip id='threeDotsList' html='This list expand constantly as i try to learn something new everyday!' place={window.innerWidth <= 768 ? 'bottom' : 'left'} className='text-sm font-Mitr w-1/2' />
                                 </div>
                             </span>
-                            <span className='pt-4 text-sm text-right text-gray-500 font-Mitr' data-tooltip-id='lowExperience'>
+                            <span className='pt-4 text-base mobile:px-6 tablet:px-0 tablet:text-right text-gray-400 font-Mitr mobile:text-center' data-tooltip-id='lowExperience'>
                                 All my interactions from
                                 <span className='text-green-400 opacity-100'>&nbsp;2012&nbsp;</span>
                                 to<span className='text-green-400 opacity-100'>&nbsp;Present&nbsp;</span>with others
                                 <br />
-                                <span className='text-gray-500 underline underline-offset-4'>programming languages, frameworks, versioning systems or libraries!</span>
+                                <span className='text-gray-400 underline underline-offset-4'>programming languages, frameworks, versioning systems or libraries!</span>
                             </span>
-                            <Tooltip id='lowExperience' html='I am not an expert in those mentioned above. However, I have used it to gain some understanding and develop ideas.' place="bottom" className='text-sm font-Mitr' />
+                            <Tooltip id='lowExperience' html='I am not an expert in those mentioned above. However, I have used it to gain some understanding and develop ideas.' place={window.innerWidth <= 768 ? 'bottom' : 'left'}
+                                className='w-96 text-sm font-Mitr tablet:w-1/2 text-center tablet:text-right laptop:w-1/4 desktop:w-1/6' />
                         </div>
                     </div>
                     <div className='relative w-full select-none top-10'>

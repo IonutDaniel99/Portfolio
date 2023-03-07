@@ -83,7 +83,7 @@ function ScreenOne() {
                   <img src='/Images/Home/Icons/React.png' alt='' className='w-20 h-20' />
                 </div>
               </span>
-              <span className='pt-4 text-gray-500 font-Mitr reactTrigger
+              <span className='pt-4 text-gray-400 font-Mitr reactTrigger
                mobile:text-center mobile:text-lg
                tablet:text-right tablet:text-lg'>
                 I'm working with <span className='text-blue-400 opacity-100'>ReactJs</span> since May 2021.
@@ -91,7 +91,7 @@ function ScreenOne() {
 
               <span
                 data-tooltip-id="my-tooltip" data-tooltip-content="Hello world!"
-                className=' text-right text-gray-500 z-50 underline cursor-pointer font-Mitr reactTrigger underline-offset-2 
+                className=' text-right text-gray-400 z-50 underline cursor-pointer font-Mitr reactTrigger underline-offset-2 
                 mobile:text-center mobile:text-base
                 tablet:text-right tablet:text-base'>
                 Hover here for more info!
