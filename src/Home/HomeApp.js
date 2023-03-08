@@ -22,7 +22,7 @@ function HomeApp() {
 
   return (
     <>
-      <div className='absolute top-10 left-10 z-[50000] text-white h-10 w-fit font-Mitr text-2xl bg-gray-700 px-4 pt-1 rounded-xl text-center animate-pulse'>
+      <div className='fixed bottom-10 tablet:top-10 left-10 z-[50000] text-white h-10 w-fit font-Mitr text-2xl bg-gray-700 px-4 pt-1 rounded-xl text-center animate-pulse'>
         Work in progress!
       </div>
       <div className='fixed w-screen h-screen bg-darkNotDark'></div>
@@ -34,17 +34,6 @@ function HomeApp() {
         <Projects />
         <Footer />
       </SmoothScroll>
-      {/* <div className="lastContainer">Last Container</div> */}
     </>
   )
 }
-
-// eslint-disable-next-line no-lone-blocks
-// /* <nav className="z-50 flex gap-20">
-//             <NavLink to={"/"}>Home</NavLink>
-//             <NavLink to={"/Projects/FromDesignToCode/Indonesia"}>
-//                 Indonesia
-//             </NavLink>
-//             <NavLink to={"/Projects/FromDesignToCode/Cards"}>Cards</NavLink>
-//             <NavLink to={"/Projects/MazdaRx8"}>MazdaRx8</NavLink>
-//         </nav> */

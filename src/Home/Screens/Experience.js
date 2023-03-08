@@ -95,13 +95,18 @@ function Experience() {
         mobile:px-2.5 mobile:w-full 
         tablet:text-lg tablet:w-8/12
         laptop:w-2/4
+        desktop:w-5/12
         '
         >
           <span>
-            Company: <span className='text-orange-500 underline underline-offset-4'>Endava</span>
+            Company: Currently I`m working for <span className='text-orange-500 underline underline-offset-4'>Endava</span>
           </span>
-          <span>Location: Pitesti, Romania</span>
-          <span>Employed: May 2021 - Present · ({generateDate()})</span>
+          <span>
+            Location: Our office is located in <span className='underline underline-offset-4'>Pitesti, Romania</span>
+          </span>
+          <span>
+            Employed: May 2021 - Present <span className='relative px-1 scale-150 bottom-[2px] text-white'>•</span> ({generateDate()})
+          </span>
           <span>
             Current project: Banking services where we develop a <span className='text-blue-400'>ReactJS</span> web application for trading!
           </span>
