@@ -1,5 +1,5 @@
 import gsap from 'gsap'
-import React, { useEffect, useLayoutEffect, useRef } from 'react'
+import React, { useLayoutEffect, useRef } from 'react'
 import ScreenOne from './projectsPanels/ScreenOne'
 import ScreenThree from './projectsPanels/ScreenThree'
 import ScreenTwo from './projectsPanels/ScreenTwo'
@@ -35,7 +35,6 @@ function Projects() {
           toggleActions: 'play none none none',
         },
       })
-
     }, component)
     return () => ctx.revert()
   })
@@ -48,9 +47,15 @@ function Projects() {
         </div>
       </div>
       <div className='z-10 flex flex-row flex-wrap w-full h-full sliderProjects'>
-        <div className='z-10 w-screen min-h-[800px]'><ScreenOne /></div>
-        <div className='z-10 w-screen min-h-[800px]'><ScreenTwo /></div>
-        <div className='z-10 w-screen min-h-[800px]'><ScreenThree /></div>
+        <div className='z-10 w-screen min-h-[800px]'>
+          <ScreenOne />
+        </div>
+        <div className='z-10 w-screen min-h-[800px]'>
+          <ScreenTwo />
+        </div>
+        <div className='z-10 w-screen min-h-[800px]'>
+          <ScreenThree />
+        </div>
       </div>
     </div>
   )
