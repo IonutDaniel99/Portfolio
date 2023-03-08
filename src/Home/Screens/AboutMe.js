@@ -25,7 +25,11 @@ function AboutMe({ isAboutMeDone }) {
       })
       .to('.thisIsMe', {
         opacity: 1,
-        duration: 2,
+        duration: 1.5,
+      })
+      .to('.thisIsMe', {
+        opacity: 0,
+        duration: 1.5,
       })
       .to('.myPhoto', {
         ease: 'power3.inOut',
@@ -130,8 +134,8 @@ function AboutMe({ isAboutMeDone }) {
             <p
               className='absolute flex items-center justify-center h-full text-base text-center opacity-0 thisIsMe
              tablet:text-base tablet:w-3/4
-             laptop:text-2xl
-             desktop:text-3xl'
+             laptop:text-2xl laptop:w-full
+             desktop:text-2xl'
             >
               And this is a photo with me! 😄
             </p>
