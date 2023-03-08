@@ -13,6 +13,9 @@ const responsive = {
   1800: { items: 3 },
 }
 
+const modalHtml =
+  'While I may not consider myself an expert in those particular tools or technologies, I have gained some understanding and familiarity through working with different software development tools. As a result, I can offer insights and ideas based on my experiences that could be helpful to you.'
+
 const items = [
   <CarouselItem
     year={'Mar 2021'}
@@ -111,9 +114,9 @@ function ScreenThree() {
               </span>
               <Tooltip
                 id='lowExperience'
-                html='I am not an expert in those mentioned. However, I have used it to gain some understanding and develop ideas.'
+                html={modalHtml}
                 place={window.innerWidth <= 768 ? 'bottom' : 'left'}
-                className='w-96 text-sm font-Mitr tablet:w-1/2 text-center tablet:text-right laptop:text-center laptop:w-1/4 desktop:w-1/6'
+                className='w-96 text-sm font-Mitr tablet:w-1/2 text-center tablet:text-right laptop:text-center laptop:w-2/4 desktop:w-4/12 z-50'
               />
             </div>
           </div>

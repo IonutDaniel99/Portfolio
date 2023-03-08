@@ -87,7 +87,7 @@ function Experience() {
         className='z-10 flex items-center pt-20 justify-between h-96
       mobile:flex-col mobile:gap-20 mobile:w-full
       tablet:flex-row tablet:gap-4 tablet:w-full
-      laptop:justify-around laptop:w-3/4
+      laptop:justify-around laptop:w-8/12
       '
       >
         <div
@@ -99,27 +99,27 @@ function Experience() {
         '
         >
           <span>
-            Company: Currently I`m working for <span className='text-orange-500 underline underline-offset-4'>Endava</span>
+            Company: I am currently working for <span className='text-orange-500 underline underline-offset-4'>Endava</span>
           </span>
           <span>
-            Location: Our office is located in <span className='underline underline-offset-4'>Pitesti, Romania</span>
+            Location: Our work office is situated in <span className='underline underline-offset-4 text-cyan-300'>Pitesti, Romania</span>
           </span>
           <span>
-            Employed: May 2021 - Present <span className='relative px-1 scale-150 bottom-[2px] text-white'>•</span> ({generateDate()})
+            Employed: May 2021 - Present <span className='relative px-1 scale-150 bottom-[2px] text-white'>•</span>{' '}
+            <span className='text-lime-500 underline underline-offset-4'>({generateDate()})</span>
           </span>
           <span>
-            Current project: Banking services where we develop a <span className='text-blue-400'>ReactJS</span> web application for trading!
+            Current project: Developing a <span className='text-blue-400'>ReactJS</span> web application for trading in the banking industry.
           </span>
         </div>
         <img
           src='/Images/Home/Endava.jpg'
           alt=''
           className='h-2/4 object-cover rounded-xl companyPic clipFade
-        mobile:w-10/12 mobile:px-2.5
-        tablet:w-4/12
-        laptop:w-2/4 laptop:h-3/4
-        desktop:h-[200px] desktop:w-2/6
-        '
+              mobile:w-10/12 mobile:px-2.5
+              tablet:w-4/12
+              laptop:w-2/4 laptop:h-3/4
+              desktop:h-[200px] desktop:w-2/6'
         />
       </div>
     </div>

@@ -90,12 +90,12 @@ function AboutMe({ isAboutMeDone }) {
             className='flex flex-col gap-8
             mobile:mt-0
             tablet:mt-0 tablet:w-[400px] tablet:gap-16 tablet:ml-2
-            laptop:mt-0 laptop:w-[600px]'
+            laptop:mt-0 laptop:w-1/2'
           >
             <p
               className='w-full text-4xl font-semibold tracking-wider clipFade myName 
             tablet:text-5xl tablet:w-full
-            laptop:text-7xl laptop:w-full
+            laptop:text-7xl laptop:w-[645px]
             desktop:text-7xl 
             '
             >
@@ -109,7 +109,7 @@ function AboutMe({ isAboutMeDone }) {
              desktop:text-3xl desktop:w-[800px]
             '
             >
-              Front-end developer with a passion for games and for graphical environments that captivates the eyes.
+              Front-end developer with a passion for creating captivating graphical environments and games.
             </h2>
             <h2
               className='text-base clipFade myTime
@@ -119,15 +119,14 @@ function AboutMe({ isAboutMeDone }) {
              desktop:text-3xl desktop:w-[800px]
             '
             >
-              I`m currently based in Romania, <br />
-              and I pursuit a Master's degree in Computer Science.
+              Currently based in Romania, I'm pursuing a Master's degree in Computer Science.
             </h2>
           </div>
           <div
             className='myPhoto relative flex justify-center
           mobile:w-[470px] mobile:h-[400px] 
           tablet:w-[450px] tablet:h-[650px] tablet:items-center
-          laptop:w-1/2 laptop:h-[650px]
+          laptop:w-[450px] laptop:h-[650px]
           desktop:w-[500px]
           '
           >

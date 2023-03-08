@@ -35,7 +35,7 @@ const items = [
 ]
 
 const popupContent =
-  'First interaction with Figma was in 2020, were i made an ugly dashboard for my soul. After 2 years, i have joined in a internal company project where i made a mockup webpage design for employees.'
+  'I first interacted with Figma in 2020, where I created a simple dashboard for myself that was less than impressive. Two years later, I had the opportunity to work on an internal company project where I designed a mockup webpage for employees using Figma.'
 
 function ScreenTwo() {
   useEffect(() => {
@@ -81,7 +81,7 @@ function ScreenTwo() {
                                                 mobile:text-center mobile:text-lg
                                                 tablet:text-right tablet:text-lg'
               >
-                I`ve come back to <span className='text-red-400 opacity-100'>Figma</span> in November 2022!
+                I returned to using <span className='text-red-400 opacity-100'>Figma</span> in November 2022!
               </span>
               <span
                 data-tooltip-id='figmaToolTip'
@@ -97,9 +97,9 @@ function ScreenTwo() {
                   place={window.innerWidth <= 768 ? 'bottom' : 'left'}
                   className='
                                         mobile:w-96 mobile:h-fit mobile:flex mobile:items-center
-                                        tablet:w-80 tablet:h-fit tablet:flex tablet:items-center tablet:pt-2
+                                        tablet:h-fit tablet:flex tablet:items-center tablet:pt-2
                                         laptop:w-1/4 laptop:text-center 
-                                        desktop:w-2/6'
+                                        desktop:w-5/12'
                 />
               </span>
             </div>

@@ -91,7 +91,7 @@ function ScreenOne() {
                mobile:text-center mobile:text-lg
                tablet:text-right tablet:text-lg'
               >
-                I'm working with <span className='text-blue-400 opacity-100'>ReactJs</span> since May 2021.
+                I have been working with <span className='text-blue-400 opacity-100'>ReactJs</span> since May 2021.
               </span>
 
               <span
@@ -107,7 +107,7 @@ function ScreenOne() {
                   html={popupContent}
                   place={window.innerWidth <= 768 ? 'bottom' : 'left'}
                   className='mobile:w-96 mobile:h-fit mobile:flex mobile:items-center
-                tablet:w-80 tablet:h-fit tablet:flex tablet:items-center tablet:pt-2
+                tablet:h-fit tablet:flex tablet:items-center tablet:pt-2
                 laptop:w-1/4 laptop:text-center 
                 '
                 />
