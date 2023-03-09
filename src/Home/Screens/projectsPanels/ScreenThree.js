@@ -59,21 +59,18 @@ function ScreenThree() {
   })
 
   return (
-    <div className='flex items-center tablet:justify-center h-full'>
-      <div className='relative flex justify-center w-full text-2xl text-white h-full clipFade screenThreeContainer'>
+    <div className='flex items-center h-full tablet:justify-center'>
+      <div className='relative flex justify-center w-full text-2xl text-white h-3/4 clipFade screenThreeContainer'>
         <div className='h-full mobile:w-full tablet:w-4/6'>
           <div
-            className='flex items-center justify-end pr-20 h-1/4
-                                    mobile:pr-0 mobile:justify-center
-                                    tablet:justify-end
-                                    desktop:pr-20'
+            className='flex items-center justify-end pr-20 h-1/4 mobile:pr-0 mobile:justify-center tablet:justify-end desktop:pr-20'
           >
             <div className='flex flex-col'>
-              <span className='relative flex flex-col float-right h-full gap-4 w-full'>
-                <div className='flex items-center mobile:justify-center tablet:justify-end h-full gap-4'>
-                  <p className='text-4xl tablet:text-4xl font-Mitr pb-4'>Other skills in my deck!</p>
+              <span className='relative flex flex-col float-right w-full h-full gap-4'>
+                <div className='flex items-center h-full gap-4 mobile:justify-center tablet:justify-end'>
+                  <p className='text-3xl tablet:text-4xl font-Mitr'>Other skills in my deck!</p>
                 </div>
-                <div className='flex gap-1 items-center justify-center overflow-x-scroll tablet:gap-2 desktop:gap-3'>
+                <div className='flex items-center justify-center gap-1 overflow-x-scroll tablet:gap-2 desktop:gap-3'>
                   <IconsTooltip iconName={'Php'} iconPath={'/Images/Home/Icons/php.png'} isDark={false} />
                   <IconsTooltip iconName={'Python'} iconPath={'/Images/Home/Icons/python.png'} isDark={false} />
                   <span className='w-[2px] h-6 bg-gray-400 rounded-xl mx-2' />
@@ -96,31 +93,28 @@ function ScreenThree() {
                     id='threeDotsList'
                     html='This list expand constantly as i try to learn something new everyday!'
                     place={window.innerWidth <= 768 ? 'bottom' : 'left'}
-                    className='text-sm font-Mitr w-1/2'
+                    className='w-1/2 text-sm font-Mitr'
                   />
                 </div>
               </span>
               <span
-                className='pt-4 text-base mobile:px-6 tablet:px-0 tablet:text-right text-gray-400 font-Mitr mobile:text-center'
+                className='flex flex-col items-center px-0 pt-4 text-base text-gray-400 tablet:px-0 font-Mitr mobile:text-center mobile:text-sm tablet:text-base tablet:text-right tablet:items-end '
                 data-tooltip-id='lowExperience'
               >
-                All my interactions from
-                <span className='text-green-400 opacity-100'>&nbsp;2012&nbsp;</span>
-                to<span className='text-green-400 opacity-100'>&nbsp;Present&nbsp;</span>with others
-                <br />
-                <span className='text-gray-400 underline underline-offset-4'>
+                Some projects i`ve interacted with others<br />
+                <div className='flex text-gray-400 underline underline-offset-4 mobile:w-3/4 tablet:w-fit'>
                   programming languages, frameworks, versioning systems or libraries!
-                </span>
+                </div>
               </span>
               <Tooltip
                 id='lowExperience'
                 html={modalHtml}
                 place={window.innerWidth <= 768 ? 'bottom' : 'left'}
-                className='w-96 text-sm font-Mitr tablet:w-1/2 text-center tablet:text-right laptop:text-center laptop:w-2/4 desktop:w-4/12 z-50'
+                className='z-50 text-sm text-center w-96 font-Mitr tablet:w-1/2 tablet:text-right laptop:text-center laptop:w-2/4 desktop:w-4/12'
               />
             </div>
           </div>
-          <div className='relative w-full select-none top-10 border-solid border-lime-700 border-opacity-40 bg-lime-800 bg-opacity-10 border-2 rounded-xl'>
+          <div className='relative w-full border-2 border-solid select-none top-10 border-lime-700 border-opacity-40 bg-lime-800 bg-opacity-10 rounded-xl'>
             <AliceCarousel
               mouseTracking
               items={items}
