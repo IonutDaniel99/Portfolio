@@ -6,7 +6,6 @@ const SmoothScroll = ({ children }) => {
     width: window.innerWidth,
     height: window.innerHeight,
   }
-  console.log(windowSize)
 
   //2.
   const scrollingContainerRef = useRef()
