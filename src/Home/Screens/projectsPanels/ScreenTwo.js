@@ -7,7 +7,8 @@ import CarouselItem from './CarouselItem'
 
 const responsive = {
   425: { items: 1 },
-  1024: { items: 2 },
+  1025: { items: 1 },
+  1325: { items: 2 },
   1366: { items: 2 },
   1800: { items: 3 },
 }

@@ -8,7 +8,8 @@ import CarouselItem from './CarouselItem'
 
 const responsive = {
   425: { items: 1 },
-  1024: { items: 2 },
+  1025: { items: 1 },
+  1325: { items: 2 },
   1366: { items: 2 },
   1800: { items: 3 },
 }
@@ -72,20 +73,20 @@ function ScreenThree() {
                 </div>
                 <div className='flex items-center justify-center gap-1 overflow-x-scroll tablet:gap-2 desktop:gap-3'>
                   <IconsTooltip iconName={'Php'} iconPath={'/Images/Home/Icons/php.png'} isDark={false} />
-                  <IconsTooltip iconName={'Python'} iconPath={'/Images/Home/Icons/python.png'} isDark={false} />
+                  <IconsTooltip iconName={'Python'} iconPath={'/Images/Home/Icons/python.png'} isDark={false} className="mobile:hidden" />
                   <span className='w-[2px] h-6 bg-gray-400 rounded-xl mx-2' />
                   <IconsTooltip iconName={'Laravel'} iconPath={'/Images/Home/Icons/laravel.png'} isDark={false} />
                   <IconsTooltip iconName={'NodeJs'} iconPath={'/Images/Home/Icons/node.png'} isDark={false} />
                   <span className='w-[2px] h-6 bg-gray-400 rounded-xl mx-2' />
                   <IconsTooltip iconName={'Unity'} iconPath={'/Images/Home/Icons/unity.png'} isDark={true} />
-                  <IconsTooltip iconName={'Unreal Engine'} iconPath={'/Images/Home/Icons/unreal.png'} isDark={true} />
+                  <IconsTooltip iconName={'Unreal Engine'} iconPath={'/Images/Home/Icons/unreal.png'} isDark={true} className="mobile:hidden" />
                   <span className='w-[2px] h-6 bg-gray-400 rounded-xl mx-2' />
                   <IconsTooltip iconName={'Git (Gitlab & Github)'} iconPath={'/Images/Home/Icons/git.png'} isDark={false} />
                   <IconsTooltip iconName={'Azure Devops'} iconPath={'/Images/Home/Icons/azure.png'} isDark={false} />
                   <span className='w-[2px] h-6 bg-gray-400 rounded-xl mx-2' />
                   <IconsTooltip iconName={'React Native (Android)'} iconPath={'/Images/Home/Icons/reactN.png'} isDark={false} />
-                  <IconsTooltip iconName={'Solid Js'} iconPath={'/Images/Home/Icons/solid.png'} isDark={false} />
-                  <IconsTooltip iconName={'Three Js'} iconPath={'/Images/Home/Icons/three.png'} isDark={true} />
+                  <IconsTooltip iconName={'Solid Js'} iconPath={'/Images/Home/Icons/solid.png'} isDark={false} className="mobile:hidden" />
+                  <IconsTooltip iconName={'Three Js'} iconPath={'/Images/Home/Icons/three.png'} isDark={true} className="mobile:hidden" />
                   <IconsTooltip iconName={'Tailwind Css'} iconPath={'/Images/Home/Icons/tailwind.png'} isDark={false} />
                   <span className='w-[2px] h-6 bg-gray-400 rounded-xl mx-2' />
                   <img src={'/Images/Home/Icons/dots.png'} alt='' className='object-contain w-6 h-6 mx-1 invert' data-tooltip-id='threeDotsList' />

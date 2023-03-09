@@ -7,7 +7,8 @@ import { Tooltip } from 'react-tooltip'
 
 const responsive = {
   425: { items: 1 },
-  1024: { items: 2 },
+  1025: { items: 1 },
+  1325: { items: 2 },
   1366: { items: 2 },
   1800: { items: 3 },
 }
@@ -107,9 +108,9 @@ function ScreenOne() {
             <div className='absolute top-0 z-10 w-full h-full pointer-events-none bgScroll'>
               <span className='absolute w-full h-full bg-darkNotDark opacity-70 rounded-xl'></span>
               <span
-                className='absolute flex items-center justify-center w-full h-full text-gray-200 font-Mitr mobile:text-base tablet:text-3xl'
+                className='absolute flex items-center justify-center w-full h-full text-center text-gray-200 font-Mitr mobile:text-base tablet:text-3xl'
               >
-                Scroll to right in this <span className='px-2 underline'> area </span> using your mouse or finger!
+                Scroll to right in this area using your mouse or finger!
               </span>
             </div>
             <AliceCarousel
