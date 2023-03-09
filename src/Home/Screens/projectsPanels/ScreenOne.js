@@ -7,7 +7,8 @@ import { Tooltip } from 'react-tooltip'
 
 const responsive = {
   425: { items: 1 },
-  1024: { items: 2 },
+  1025: { items: 1 },
+  1325: { items: 2 },
   1366: { items: 2 },
   1800: { items: 3 },
 }
@@ -73,11 +74,7 @@ function ScreenOne() {
       <div className='relative flex justify-center w-full text-2xl text-white h-3/4 clipFade screenOneContainer'>
         <div className='h-full mobile:w-full tablet:w-4/6'>
           <div
-            className='flex items-center justify-end pr-20 h-1/4
-                          mobile:pr-0 mobile:justify-center
-                          tablet:justify-end
-                          desktop:pr-20
-          '
+            className='flex items-center justify-end pr-20 h-1/4 mobile:pr-0 mobile:justify-center tablet:justify-end desktop:pr-20 '
           >
             <div className='flex flex-col'>
               <span className='relative float-right h-full'>
@@ -87,42 +84,33 @@ function ScreenOne() {
                 </div>
               </span>
               <span
-                className='pt-4 text-gray-400 font-Mitr reactTrigger
-               mobile:text-center mobile:text-lg
-               tablet:text-right tablet:text-lg'
+                className='pt-4 text-gray-400 font-Mitr reactTrigger mobile:text-center mobile:text-base tablet:text-right tablet:text-lg'
               >
-                I have been working with <span className='text-blue-400 opacity-100'>ReactJs</span> since May 2021.
+                I`ve been working with <span className='text-blue-400 opacity-100'>ReactJs</span> since May 2021.
               </span>
 
               <span
                 data-tooltip-id='my-tooltip'
                 data-tooltip-content='Hello world!'
-                className=' text-right text-gray-400 z-50 underline cursor-pointer font-Mitr reactTrigger underline-offset-2 
-                mobile:text-center mobile:text-base
-                tablet:text-right tablet:text-base'
+                className='z-50 text-right text-gray-400 underline cursor-pointer font-Mitr reactTrigger underline-offset-2 mobile:text-center mobile:text-sm tablet:text-right tablet:text-base'
               >
                 Hover here for more info!
                 <Tooltip
                   id='my-tooltip'
                   html={popupContent}
                   place={window.innerWidth <= 768 ? 'bottom' : 'left'}
-                  className='mobile:w-96 mobile:h-fit mobile:flex mobile:items-center
-                tablet:h-fit tablet:flex tablet:items-center tablet:pt-2
-                laptop:w-1/4 laptop:text-center 
-                '
+                  className='mobile:w-96 mobile:h-fit mobile:flex mobile:items-center tablet:h-fit tablet:flex tablet:items-center tablet:pt-2 laptop:w-1/4 laptop:text-center '
                 />
               </span>
             </div>
           </div>
-          <div className='relative w-full select-none top-10 border-solid border-sky-800 border-opacity-40 bg-sky-900 bg-opacity-10 border-2 rounded-xl'>
+          <div className='relative w-full border-2 border-solid select-none top-10 border-sky-800 border-opacity-40 bg-sky-900 bg-opacity-10 rounded-xl'>
             <div className='absolute top-0 z-10 w-full h-full pointer-events-none bgScroll'>
               <span className='absolute w-full h-full bg-darkNotDark opacity-70 rounded-xl'></span>
               <span
-                className='absolute flex items-center justify-center w-full h-full text-gray-200 font-Mitr
-                              mobile:text-base
-                              tablet:text-3xl'
+                className='absolute flex items-center justify-center w-full h-full text-center text-gray-200 font-Mitr mobile:text-base tablet:text-3xl'
               >
-                Scroll to right in this <span className='px-2 underline'> area </span> using your mouse or finger!
+                Scroll to right in this area using your mouse or finger!
               </span>
             </div>
             <AliceCarousel

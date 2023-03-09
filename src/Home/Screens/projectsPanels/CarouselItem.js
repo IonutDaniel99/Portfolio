@@ -3,9 +3,7 @@ const handleDragStart = (e) => e.preventDefault()
 
 function CarouselItem({ year, description, imagePath, shouldHaveBorder, externalLink, isReset, handleReset }) {
   return (
-    <div className='cursor-pointer group flex 
-     mobile:items-center mobile:flex-col
-     ' onDragStart={handleDragStart} onClick={handleReset}>
+    <div className='flex cursor-pointer group mobile:items-center mobile:flex-col ' onDragStart={handleDragStart} onClick={handleReset}>
       <div className='flex items-center justify-center w-[375px] h-20 font-Mitr text-xl opacity-20 group-hover:opacity-100  group-hover:text-white duration-700'>
         {year}
       </div>
@@ -21,14 +19,11 @@ function CarouselItem({ year, description, imagePath, shouldHaveBorder, external
           mobile:w-[320px] mobile:h-[195px]
           tablet:w-[375px] tablet:h-[210px]
           '></div>
-          <span className='z-20 w-10/12  text-center text-white duration-700 font-Mitr
-          mobile:text-xl
-          tablet:text-2xl
-          '>{description}</span>
+          <span className='z-20 w-10/12 text-center text-white duration-700 font-Mitr mobile:text-xl tablet:text-2xl '>{description}</span>
         </div>
         <img
           src={imagePath}
-          className={`duration-700 group-hover:scale group-hover:scale-105 h-full w-full ${isReset ? 'w-32 h-32 invert opacity-40' : ''}`}
+          className={`duration-700 group-hover:scale-105 h-full w-full ${isReset ? 'w-32 h-32 invert opacity-40' : ''}`}
           alt=''
         />
       </div>
