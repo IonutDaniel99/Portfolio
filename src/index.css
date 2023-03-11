@@ -43,7 +43,7 @@ img {
   background: yellow;
 }
 
-::-webkit-scrollbar {
+.noScrollbar::-webkit-scrollbar {
   display: none;
 }
 
