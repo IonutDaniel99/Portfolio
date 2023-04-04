@@ -14,12 +14,7 @@ function App() {
         <Route path='/Projects/FromDesignToCode/Indonesia' element={<IndonesiaApp />}></Route>
         <Route path='/Projects/FromDesignToCode/Cards' element={<CardsApp />}></Route>
         <Route path='/Projects/MazdaRx8' element={<MazdaRx8Main />}></Route>
-        <Route
-          path='/Projects/3d'
-          element={
-            <Landscape3D />
-          }
-        ></Route>
+        <Route path='/Projects/3DLandscape' element={<Landscape3D />}></Route>
       </Routes>
       {/* <BackToPortfolio /> */}
     </BrowserRouter>

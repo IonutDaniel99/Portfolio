@@ -28,6 +28,13 @@ const items = [
   />,
   <CarouselItem year={'Feb 2023'} description={'This portfolio. :D'} imagePath={'/Images/Home/PortfolioPresent.png'} shouldHaveBorder={true} />,
   <CarouselItem
+    year={'Apr 2023'}
+    description={'3D generated landscape viewer. '}
+    imagePath={'/Images/Home/3dLandscape.png'}
+    shouldHaveBorder={true}
+    externalLink='/Projects/3DLandscape'
+  />,
+  <CarouselItem
     year={'In time.'}
     description={'All my ReactJs projects will be available here.'}
     imagePath={'/Images/Home/ReactBg.png'}
@@ -73,9 +80,7 @@ function ScreenOne() {
     <div className='flex items-center h-full tablet:justify-center'>
       <div className='relative flex justify-center w-full text-2xl text-white h-3/4 clipFade screenOneContainer'>
         <div className='h-full mobile:w-full tablet:w-4/6'>
-          <div
-            className='flex items-center justify-end pr-20 h-1/4 mobile:pr-0 mobile:justify-center tablet:justify-end desktop:pr-20 '
-          >
+          <div className='flex items-center justify-end pr-20 h-1/4 mobile:pr-0 mobile:justify-center tablet:justify-end desktop:pr-20 '>
             <div className='flex flex-col'>
               <span className='relative float-right h-full'>
                 <div className='flex items-center justify-end h-full gap-4 mobile:justify-center tablet:justify-end'>
@@ -83,9 +88,7 @@ function ScreenOne() {
                   <img src='/Images/Home/Icons/React.png' alt='' className='w-20 h-20' />
                 </div>
               </span>
-              <span
-                className='pt-4 text-gray-400 font-Mitr reactTrigger mobile:text-center mobile:text-base tablet:text-right tablet:text-lg'
-              >
+              <span className='pt-4 text-gray-400 font-Mitr reactTrigger mobile:text-center mobile:text-base tablet:text-right tablet:text-lg'>
                 I`ve been working with <span className='text-blue-400 opacity-100'>ReactJs</span> since May 2021.
               </span>
 
@@ -107,9 +110,7 @@ function ScreenOne() {
           <div className='relative w-full border-2 border-solid select-none top-10 border-sky-800 border-opacity-40 bg-sky-900 bg-opacity-10 rounded-xl'>
             <div className='absolute top-0 z-10 w-full h-full pointer-events-none bgScroll'>
               <span className='absolute w-full h-full bg-darkNotDark opacity-70 rounded-xl'></span>
-              <span
-                className='absolute flex items-center justify-center w-full h-full text-center text-gray-200 font-Mitr mobile:text-base tablet:text-3xl'
-              >
+              <span className='absolute flex items-center justify-center w-full h-full text-center text-gray-200 font-Mitr mobile:text-base tablet:text-3xl'>
                 Scroll to right in this area using your mouse or finger!
               </span>
             </div>
