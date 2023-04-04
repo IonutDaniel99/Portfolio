@@ -63,9 +63,7 @@ function ScreenThree() {
     <div className='flex items-center h-full tablet:justify-center'>
       <div className='relative flex justify-center w-full text-2xl text-white h-3/4 clipFade screenThreeContainer'>
         <div className='h-full mobile:w-full tablet:w-4/6'>
-          <div
-            className='flex items-center justify-end pr-20 h-1/4 mobile:pr-0 mobile:justify-center tablet:justify-end desktop:pr-20'
-          >
+          <div className='flex items-center justify-end pr-20 h-1/4 mobile:pr-0 mobile:justify-center tablet:justify-end desktop:pr-20'>
             <div className='flex flex-col'>
               <span className='relative flex flex-col float-right w-full h-full gap-4'>
                 <div className='flex items-center h-full gap-4 mobile:justify-center tablet:justify-end'>
@@ -73,20 +71,30 @@ function ScreenThree() {
                 </div>
                 <div className='flex items-center justify-center gap-1 overflow-x-scroll tablet:gap-2 desktop:gap-3'>
                   <IconsTooltip iconName={'Php'} iconPath={'/Images/Home/Icons/php.png'} isDark={false} />
-                  <IconsTooltip iconName={'Python'} iconPath={'/Images/Home/Icons/python.png'} isDark={false} className="mobile:hidden" />
+                  <IconsTooltip iconName={'Python'} iconPath={'/Images/Home/Icons/python.png'} isDark={false} className='mobile:hidden tablet:flex' />
                   <span className='w-[2px] h-6 bg-gray-400 rounded-xl mx-2' />
                   <IconsTooltip iconName={'Laravel'} iconPath={'/Images/Home/Icons/laravel.png'} isDark={false} />
                   <IconsTooltip iconName={'NodeJs'} iconPath={'/Images/Home/Icons/node.png'} isDark={false} />
                   <span className='w-[2px] h-6 bg-gray-400 rounded-xl mx-2' />
                   <IconsTooltip iconName={'Unity'} iconPath={'/Images/Home/Icons/unity.png'} isDark={true} />
-                  <IconsTooltip iconName={'Unreal Engine'} iconPath={'/Images/Home/Icons/unreal.png'} isDark={true} className="mobile:hidden" />
+                  <IconsTooltip
+                    iconName={'Unreal Engine'}
+                    iconPath={'/Images/Home/Icons/unreal.png'}
+                    isDark={true}
+                    className='mobile:hidden tablet:flex'
+                  />
                   <span className='w-[2px] h-6 bg-gray-400 rounded-xl mx-2' />
                   <IconsTooltip iconName={'Git (Gitlab & Github)'} iconPath={'/Images/Home/Icons/git.png'} isDark={false} />
                   <IconsTooltip iconName={'Azure Devops'} iconPath={'/Images/Home/Icons/azure.png'} isDark={false} />
                   <span className='w-[2px] h-6 bg-gray-400 rounded-xl mx-2' />
                   <IconsTooltip iconName={'React Native (Android)'} iconPath={'/Images/Home/Icons/reactN.png'} isDark={false} />
-                  <IconsTooltip iconName={'Solid Js'} iconPath={'/Images/Home/Icons/solid.png'} isDark={false} className="mobile:hidden" />
-                  <IconsTooltip iconName={'Three Js'} iconPath={'/Images/Home/Icons/three.png'} isDark={true} className="mobile:hidden" />
+                  <IconsTooltip
+                    iconName={'Solid Js'}
+                    iconPath={'/Images/Home/Icons/solid.png'}
+                    isDark={false}
+                    className='mobile:hidden tablet:flex'
+                  />
+                  <IconsTooltip iconName={'Three Js'} iconPath={'/Images/Home/Icons/three.png'} isDark={true} className='mobile:hidden tablet:flex' />
                   <IconsTooltip iconName={'Tailwind Css'} iconPath={'/Images/Home/Icons/tailwind.png'} isDark={false} />
                   <span className='w-[2px] h-6 bg-gray-400 rounded-xl mx-2' />
                   <img src={'/Images/Home/Icons/dots.png'} alt='' className='object-contain w-6 h-6 mx-1 invert' data-tooltip-id='threeDotsList' />
@@ -102,7 +110,8 @@ function ScreenThree() {
                 className='flex flex-col items-center px-0 pt-4 text-base text-gray-400 tablet:px-0 font-Mitr mobile:text-center mobile:text-sm tablet:text-base tablet:text-right tablet:items-end '
                 data-tooltip-id='lowExperience'
               >
-                Some projects i`ve interacted with others<br />
+                Some projects i`ve interacted with others
+                <br />
                 <div className='flex text-gray-400 underline underline-offset-4 mobile:w-3/4 tablet:w-fit'>
                   programming languages, frameworks, versioning systems or libraries!
                 </div>
