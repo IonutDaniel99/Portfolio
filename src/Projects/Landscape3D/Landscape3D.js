@@ -1,6 +1,7 @@
 import * as THREE from 'three'
 import { useEffect, useRef, useState } from 'react'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
+import { gsap } from 'gsap'
 
 const landscapeObject = {
   1: {
@@ -58,6 +59,15 @@ const Landscape3D = () => {
   const rendererRef = useRef(null)
   const randNumber = generateRandom(1, Object.keys(landscapeObject).length + 1)
   const renderer = new THREE.WebGLRenderer()
+
+  useEffect(() => {
+    var mousePng = gsap.timeline({ repeat: -1 })
+
+    let ctx = gsap.context(() => {
+      mousePng.to('mouseDiv', { duration: 0.6, y: 0, stagger: 0.3 }).to('mouseDiv', { duration: 0.6, y: -30, stagger: 0.3 })
+    })
+    return () => ctx.revert()
+  })
 
   useEffect(() => {
     // Get the container element and create the renderer
@@ -122,7 +132,10 @@ const Landscape3D = () => {
 
   return (
     <div className='flex items-center justify-center w-screen h-screen'>
-      <div ref={containerRef} className='relative overflow-hidden rounded-3xl'>
+      <div className='absolute h-full w-full flex items-center justify-center pointer-events-none'>
+        <img src='/Images/3DLandscape/mouse-left-button.png' alt='mouse left icon' className='relative h-20 w-20 z-50 invert mouseDiv' />
+      </div>
+      <div ref={containerRef} className='relative overflow-hidden rounded-3xl z-10'>
         <div className='absolute flex flex-col gap-2 top-4 right-4'>
           <div
             className='px-4 py-2 font-medium text-white duration-300 ease-linear bg-black rounded-full top-4 right-8 bg-opacity-60 hover:cursor-pointer hover:bg-white hover:text-black hover:bg-opacity-100'
