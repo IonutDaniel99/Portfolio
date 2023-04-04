@@ -4,6 +4,7 @@ import Experience from './Home/Screens/Experience'
 import CardsApp from './Projects/FromDesignToCode/Cards/CardsApp'
 import IndonesiaApp from './Projects/FromDesignToCode/Indonesia/IndonesiaApp'
 import MazdaRx8Main from './Projects/MazdaRx8/MazdaRx8Main'
+import Landscape3D from './Projects/Landscape3D/Landscape3D'
 
 function App() {
   return (
@@ -14,15 +15,13 @@ function App() {
         <Route path='/Projects/FromDesignToCode/Cards' element={<CardsApp />}></Route>
         <Route path='/Projects/MazdaRx8' element={<MazdaRx8Main />}></Route>
         <Route
-          path='/Projects/porto'
+          path='/Projects/3d'
           element={
-            <div className='bg-darkNotDark'>
-              <Experience />
-            </div>
+            <Landscape3D />
           }
         ></Route>
       </Routes>
-      <BackToPortfolio />
+      {/* <BackToPortfolio /> */}
     </BrowserRouter>
   )
 }
