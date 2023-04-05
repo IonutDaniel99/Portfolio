@@ -3,6 +3,7 @@ import HomeApp from './Home/HomeApp'
 import CardsApp from './Projects/FromDesignToCode/Cards/CardsApp'
 import IndonesiaApp from './Projects/FromDesignToCode/Indonesia/IndonesiaApp'
 import MazdaRx8Main from './Projects/MazdaRx8/MazdaRx8Main'
+import Landscape3D from './Projects/Landscape3D/Landscape3D'
 
 function App() {
   return (
@@ -12,8 +13,9 @@ function App() {
         <Route path='/Projects/FromDesignToCode/Indonesia' element={<IndonesiaApp />}></Route>
         <Route path='/Projects/FromDesignToCode/Cards' element={<CardsApp />}></Route>
         <Route path='/Projects/MazdaRx8' element={<MazdaRx8Main />}></Route>
+        <Route path='/Projects/3DLandscape' element={<Landscape3D />}></Route>
       </Routes>
-      <BackToPortfolio />
+      {/* <BackToPortfolio /> */}
     </BrowserRouter>
   )
 }

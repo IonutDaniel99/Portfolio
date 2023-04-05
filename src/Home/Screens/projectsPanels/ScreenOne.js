@@ -28,6 +28,13 @@ const items = [
   />,
   <CarouselItem year={'Feb 2023'} description={'This portfolio. :D'} imagePath={'/Images/Home/PortfolioPresent.png'} shouldHaveBorder={true} />,
   <CarouselItem
+    year={'Apr 2023'}
+    description={'3D generated landscape viewer. '}
+    imagePath={'/Images/Home/3dLandscape.png'}
+    shouldHaveBorder={true}
+    externalLink='/Projects/3DLandscape'
+  />,
+  <CarouselItem
     year={'In time.'}
     description={'All my ReactJs projects will be available here.'}
     imagePath={'/Images/Home/ReactBg.png'}
