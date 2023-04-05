@@ -61,13 +61,25 @@ const Landscape3D = () => {
   const renderer = new THREE.WebGLRenderer()
 
   useEffect(() => {
-    var mousePng = gsap.timeline({ repeat: -1 })
+
 
     let ctx = gsap.context(() => {
-      mousePng.to('mouseDiv', { duration: 0.6, y: 0, stagger: 0.3 }).to('mouseDiv', { duration: 0.6, y: -30, stagger: 0.3 })
+      gsap.set(".mouseDiv", { opacity: 0 });
+
+      const timeline = gsap.timeline({ repeat: 0 });
+      timeline.to(".mouseDiv", { opacity: 1, duration: 1, delay: 1 })
+        .to(".mouseDiv", { opacity: 0, duration: 1, delay: 2 });
+
+      gsap.to(".mouseDiv", {
+        x: -150,
+        duration: 2,
+        ease: 'none',
+        repeat: -1,
+        yoyo: true
+      });
     })
     return () => ctx.revert()
-  })
+  }, [])
 
   useEffect(() => {
     // Get the container element and create the renderer
@@ -132,10 +144,10 @@ const Landscape3D = () => {
 
   return (
     <div className='flex items-center justify-center w-screen h-screen'>
-      <div className='absolute h-full w-full flex items-center justify-center pointer-events-none'>
-        <img src='/Images/3DLandscape/mouse-left-button.png' alt='mouse left icon' className='relative h-20 w-20 z-50 invert mouseDiv' />
+      <div className='absolute flex items-center justify-center w-full h-full pointer-events-none'>
+        <img src='/Images/3DLandscape/mouse-left-button.png' alt='mouse left icon' className='relative z-50 w-20 h-20 invert mouseDiv' />
       </div>
-      <div ref={containerRef} className='relative overflow-hidden rounded-3xl z-10'>
+      <div ref={containerRef} className='relative z-10 overflow-hidden rounded-3xl'>
         <div className='absolute flex flex-col gap-2 top-4 right-4'>
           <div
             className='px-4 py-2 font-medium text-white duration-300 ease-linear bg-black rounded-full top-4 right-8 bg-opacity-60 hover:cursor-pointer hover:bg-white hover:text-black hover:bg-opacity-100'
@@ -153,11 +165,19 @@ const Landscape3D = () => {
             voluptate velit esse cillum dolore eu fugiat nulla pariatur.
           </h4>
         </div>
-        <div className='absolute px-4 py-2 text-white duration-500 ease-in-out opacity-50 bottom-4 right-10 hover:bg-black hover:bg-opacity-70 hover:rounded hover:opacity-80'>
-          Credits to{' '}
-          <a className='underline cursor-pointer underline-offset-2' href='https://skybox.blockadelabs.com/'>
-            BlockadeLabs.com
-          </a>
+        <div className='absolute bottom-4 right-10'>
+          <div className='px-4 py-2 text-white duration-500 ease-in-out opacity-50 hover:bg-black hover:bg-opacity-70 hover:rounded hover:opacity-80'>
+            Credits to &nbsp;
+            <a className='underline cursor-pointer underline-offset-2' href='https://skybox.blockadelabs.com/'>
+              BlockadeLabs.com
+            </a>
+          </div>
+          <div className='px-4 py-2 text-white duration-500 ease-in-out opacity-50 hover:bg-black hover:bg-opacity-70 hover:rounded hover:opacity-80'>
+            Inspired by &nbsp;
+            <a className='underline cursor-pointer underline-offset-2' href='https://www.youtube.com/watch?v=v2eLLBUxQiQ'>
+              Design Course
+            </a>
+          </div>
         </div>
       </div>
     </div>
