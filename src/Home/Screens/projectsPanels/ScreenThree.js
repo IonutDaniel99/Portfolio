@@ -63,7 +63,9 @@ function ScreenThree() {
     <div className='flex items-center h-full tablet:justify-center'>
       <div className='relative flex justify-center w-full text-2xl text-white h-3/4 clipFade screenThreeContainer'>
         <div className='h-full mobile:w-full tablet:w-4/6'>
-          <div className='flex items-center justify-end pr-20 h-1/4 mobile:pr-0 mobile:justify-center tablet:justify-end desktop:pr-20'>
+          <div
+            className='flex items-center justify-end pr-20 h-1/4 mobile:pr-0 mobile:justify-center tablet:justify-end desktop:pr-20'
+          >
             <div className='flex flex-col'>
               <span className='relative flex flex-col float-right w-full h-full gap-4'>
                 <div className='flex items-center h-full gap-4 mobile:justify-center tablet:justify-end'>

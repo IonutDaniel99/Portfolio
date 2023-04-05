@@ -1,6 +1,5 @@
 import { BrowserRouter, NavLink, Route, Routes, useLocation } from 'react-router-dom'
 import HomeApp from './Home/HomeApp'
-import Experience from './Home/Screens/Experience'
 import CardsApp from './Projects/FromDesignToCode/Cards/CardsApp'
 import IndonesiaApp from './Projects/FromDesignToCode/Indonesia/IndonesiaApp'
 import MazdaRx8Main from './Projects/MazdaRx8/MazdaRx8Main'

@@ -17,12 +17,13 @@ gsap.registerPlugin(ScrollTrigger)
 disableScroll.on()
 
 function HomeApp() {
-
   const isAboutMeDone = () => disableScroll.off()
+
+  document.getElementsByTagName('body')[0].classList.add('noScrollbar')
 
   return (
     <>
-      <div className='fixed w-screen h-screen bg-darkNotDark'></div>
+      <div className='fixed w-screen h-screen bg-darkNotDark '></div>
       <PageTitleChanger />
       <LoadingBarScroll />
       <Bg2ColorsFollow />
