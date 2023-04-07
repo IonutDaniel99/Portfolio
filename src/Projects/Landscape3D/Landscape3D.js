@@ -158,21 +158,21 @@ const Landscape3D = () => {
         </div>
 
         <div className='absolute w-4/6 text-white bottom-6 left-6'>
-          <p className='text-5xl text-white uppercase font-BebasNeue'>{landscapeObject[randNumber].title}</p>
-          <h4 className='text-base text-white font-PaulGrotesk'>
+          <p className='text-lg text-white uppercase mobile:text-3xl laptop:text-5xl font-BebasNeue'>{landscapeObject[randNumber].title}</p>
+          <h4 className='text-sm text-white font-PaulGrotesk tablet:text-base laptop:text-base'>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
             minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
             voluptate velit esse cillum dolore eu fugiat nulla pariatur.
           </h4>
         </div>
-        <div className='absolute bottom-4 right-10'>
-          <div className='px-4 py-2 text-white duration-500 ease-in-out opacity-50 hover:bg-black hover:bg-opacity-70 hover:rounded hover:opacity-80'>
+        <div className='absolute top-16 right-2'>
+          <div className='px-4 py-2 text-right text-white duration-500 ease-in-out opacity-50 hover:bg-black hover:bg-opacity-70 hover:rounded hover:opacity-80'>
             Credits to &nbsp;
             <a className='underline cursor-pointer underline-offset-2' href='https://skybox.blockadelabs.com/'>
               BlockadeLabs.com
             </a>
           </div>
-          <div className='px-4 py-2 text-white duration-500 ease-in-out opacity-50 hover:bg-black hover:bg-opacity-70 hover:rounded hover:opacity-80'>
+          <div className='px-4 py-2 text-right text-white duration-500 ease-in-out opacity-50 hover:bg-black hover:bg-opacity-70 hover:rounded hover:opacity-80'>
             Inspired by &nbsp;
             <a className='underline cursor-pointer underline-offset-2' href='https://www.youtube.com/watch?v=v2eLLBUxQiQ'>
               Design Course
