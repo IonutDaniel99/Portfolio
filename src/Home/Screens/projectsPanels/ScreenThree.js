@@ -36,6 +36,12 @@ const items = [
     imagePath={'/Images/Home/loading.jpg'}
     externalLink='https://github.com/IonutDaniel99/Recyclify'
   />,
+  <CarouselItem
+    year={'Apr 2023'}
+    description={'[SolidJs • JS] Npm Version package lookup.'}
+    imagePath={'/Images/Home/JsPackageLookup.png'}
+    externalLink='https://js-package-lookup.vercel.app/'
+  />
 ]
 
 function ScreenThree() {
@@ -71,7 +77,7 @@ function ScreenThree() {
                 <div className='flex items-center h-full gap-4 mobile:justify-center tablet:justify-end'>
                   <p className='text-3xl tablet:text-4xl font-Mitr'>Other skills in my deck!</p>
                 </div>
-                <div className='flex items-center justify-center gap-1 overflow-x-scroll tablet:gap-2 desktop:gap-3'>
+                <div className='flex items-center justify-center gap-1 overflow-x-hidden tablet:gap-2 desktop:gap-3'>
                   <IconsTooltip iconName={'Php'} iconPath={'/Images/Home/Icons/php.png'} isDark={false} />
                   <IconsTooltip iconName={'Python'} iconPath={'/Images/Home/Icons/python.png'} isDark={false} className='mobile:hidden tablet:flex' />
                   <span className='w-[2px] h-6 bg-gray-400 rounded-xl mx-2' />
