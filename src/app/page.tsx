@@ -6,6 +6,7 @@ import dayjs from 'dayjs'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import projects_json from '@/data/page_projects.json'
+import Head from 'next/head'
 
 interface WakaTimeData {
     name: string
@@ -84,8 +85,8 @@ export default function Home() {
             <div className="min-h-screen w-full xl:w-5/6 mx-auto p-8 pb-20 sm:p-12 font-[family-name:var(--font-open-sans)] z-10 relative">
                 <div className="flex justify-between items-center mb-8">
                     <div className="w-4/6 sm:w-5/6 flex justify-start flex-col">
-                        <h1 className="text-xl sm:text-3xl font-bold">Hi, I&apos;m Ionut Daniel Ene</h1>
-                        <div className="text-sm sm:text-lg my-2 flex flex-col">
+                        <h1 className="text-2xl font-bold">Hi, I&apos;m Ionut Daniel Ene</h1>
+                        <div className="text-sm my-2 flex flex-col">
                             <div className="flex items-center gap-1">
                                 <p>I'm a full-stack developer with </p>
                                 <span>
