@@ -151,10 +151,10 @@ export default function Home() {
                         />
                     </div>
                 </div>
-                <div className="flex w-full flex-col ">
+                <div className="flex w-full flex-col">
                     <Tabs aria-label="Options">
                         <Tab key="details" title="Details">
-                            <Card className="p-2">
+                            <Card className="p-2 bg-opacity-70">
                                 <CardBody className="text-gray-300">
                                     <div className="text-sm flex flex-col gap-1">
                                         <p className="text-lg font-bold pb-4 underline underline-offset-4">
@@ -229,7 +229,7 @@ export default function Home() {
                             </Card>
                         </Tab>
                         <Tab key="projects" title="Projects">
-                            <Card className="p-2">
+                            <Card className="p-2 bg-opacity-70">
                                 <CardBody className="flex flex-col gap-4 flex-wrap">
                                     <div>
                                         <p className="text-lg">Public Projects</p>
@@ -275,7 +275,7 @@ export default function Home() {
                             </Card>
                         </Tab>
                         <Tab key="statistics" title="Stats">
-                            <Card>
+                            <Card className="pt-2 bg-opacity-70">
                                 <CardBody className="text-gray-300">
                                     <div className="text-sm flex flex-col gap-1">
                                         <p className="text-lg font-bold pb-2">Real Time Statistics!</p>
@@ -318,11 +318,11 @@ export default function Home() {
                                 </CardBody>
                             </Card>
                         </Tab>
-                        <Tab key="cotact" title="Contact">
+                        {/* <Tab key="cotact" title="Contact">
                             <Card>
                                 <CardBody className="text-gray-300"></CardBody>
                             </Card>
-                        </Tab>
+                        </Tab> */}
                     </Tabs>
                 </div>
             </div>
