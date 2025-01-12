@@ -2,10 +2,10 @@
 import React, { useLayoutEffect, useRef } from 'react'
 
 function FollowBackground() {
-    const blobRef = useRef(null)
+    const blobRef = useRef<any>(null)
 
     useLayoutEffect(() => {
-        const handleMouseMove = (event) => {
+        const handleMouseMove = (event: any) => {
             if (!blobRef.current) return
             const { clientX, clientY } = event
             blobRef.current.style.left = `${clientX}px`
