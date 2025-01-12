@@ -7,43 +7,43 @@ import Link from 'next/link'
 
 const landscapeObject = {
     1: {
-        photoUrl: '/3DLandscape/forest.jpg',
+        photoUrl: '/internal_project/3DLandscape/forest.jpg',
         title: 'Supremeley AI.'
     },
     2: {
-        photoUrl: '/3DLandscape/sky_earth.jpg',
+        photoUrl: '/internal_project/3DLandscape/sky_earth.jpg',
         title: 'Earth from another perspective.'
     },
     3: {
-        photoUrl: '/3DLandscape/mansion.jpg',
+        photoUrl: '/internal_project/3DLandscape/mansion.jpg',
         title: 'DUTCH MANSION.'
     },
     4: {
-        photoUrl: '/3DLandscape/nebula.jpg',
+        photoUrl: '/internal_project/3DLandscape/nebula.jpg',
         title: 'Space nebula.'
     },
     5: {
-        photoUrl: '/3DLandscape/lowpolyanimals.jpg',
+        photoUrl: '/internal_project/3DLandscape/lowpolyanimals.jpg',
         title: 'Low Poly Minecraft Animals'
     },
     6: {
-        photoUrl: '/3DLandscape/futuristicbuilding.jpg',
+        photoUrl: '/internal_project/3DLandscape/futuristicbuilding.jpg',
         title: 'River between Futuristic Building'
     },
     7: {
-        photoUrl: '/3DLandscape/aboveeverest.jpg',
+        photoUrl: '/internal_project/3DLandscape/aboveeverest.jpg',
         title: 'Everest above the clouds!'
     },
     8: {
-        photoUrl: '/3DLandscape/waterfall.jpg',
+        photoUrl: '/internal_project/3DLandscape/waterfall.jpg',
         title: 'Waterfall and pond between mountains!'
     },
     9: {
-        photoUrl: '/3DLandscape/mountainpeak.jpg',
+        photoUrl: '/internal_project/3DLandscape/mountainpeak.jpg',
         title: 'Mansion on the mountain.'
     },
     10: {
-        photoUrl: '/3DLandscape/insidecar.jpg',
+        photoUrl: '/internal_project/3DLandscape/insidecar.jpg',
         title: 'Inside a futuristic car!'
     }
 }
@@ -159,10 +159,10 @@ const Landscape3D = () => {
     }
 
     return (
-        <div className="flex items-center justify-center w-screen h-screen">
+        <div className="flex items-center justify-center w-screen h-screen bg-gray-800">
             <div className="absolute flex items-center justify-center w-full h-full pointer-events-none">
                 <img
-                    src="/3DLandscape/mouse-left-button.png"
+                    src="/internal_project/3DLandscape/mouse-left-button.png"
                     alt="mouse left icon"
                     className="relative z-50 w-20 h-20 invert mouseDiv left-[75px]"
                 />

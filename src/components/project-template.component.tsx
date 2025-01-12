@@ -2,9 +2,20 @@ import { Divider } from '@nextui-org/react'
 import Image from 'next/image'
 import React from 'react'
 
-type AllowedTechnologies = 'javascript' | 'typescript' | 'react' | 'laravel' | 'firebase' | 'java' | 'android'
+export type AllowedTechnologies =
+    | 'javascript'
+    | 'typescript'
+    | 'react'
+    | 'laravel'
+    | 'firebase'
+    | 'java'
+    | 'android'
+    | 'vue'
+    | 'mysql'
+    | 'php'
+    | 'solid'
 
-type RedirectLink = {
+export type RedirectLink = {
     type: 'googlePlay' | 'github' | 'redirect'
     url: string
 }

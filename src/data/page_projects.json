@@ -1,0 +1,102 @@
+{
+    "public_projects": [
+        {
+            "imageUrl": "/internal_project/SubsManager/landingcard.png",
+            "title": "Subscription Manager",
+            "description": "Helps you track your subscriptions and payments.",
+            "redirectLinks": [
+                {
+                    "type": "googlePlay",
+                    "url": "https://play.google.com/store/apps/details?id=com.subscriptionmanager"
+                }
+            ],
+            "technologies": ["typescript", "react", "android", "java", "firebase"]
+        },
+        {
+            "imageUrl": "/internal_project/jspackagelookup/image.png",
+            "title": "Javascript Package Lookup",
+            "description": "Paste package.json and see the differences between versions.",
+            "redirectLinks": [
+                {
+                    "type": "redirect",
+                    "url": "https://js-package-lookup.vercel.app"
+                }
+            ],
+            "technologies": ["typescript", "solid"]
+        }
+    ],
+    "personal_projects": [
+        {
+            "imageUrl": "https://camo.githubusercontent.com/c855ca11b78396c3bafe5bd509eda482dd6ca44f24f8afc6e1b1a85df570f690/68747470733a2f2f692e696d6775722e636f6d2f726656507266772e706e67",
+            "title": "Recyclify",
+            "description": "An app that helps you recycle your waste. Project for master degree.",
+            "redirectLinks": [
+                {
+                    "type": "github",
+                    "url": "https://github.com/IonutDaniel99/Recyclify"
+                }
+            ],
+            "technologies": ["javascript", "react", "android", "firebase"]
+        },
+        {
+            "imageUrl": "/internal_project/3DLandscape/final.png",
+            "title": "Immersive 3D Landscape",
+            "description": "Interactive 3D landscape with a rotating camera. Made with AI.",
+            "redirectLinks": [
+                {
+                    "type": "redirect",
+                    "url": "/internal_projects/landscape_3d"
+                }
+            ],
+            "technologies": ["typescript", "react"]
+        },
+        {
+            "imageUrl": "/internal_project/Indonesia/Final.png",
+            "title": "Indonesia",
+            "description": "A website that showcases the beauty of Indonesia.",
+            "redirectLinks": [
+                {
+                    "type": "redirect",
+                    "url": "/internal_projects/indonesia_app"
+                }
+            ],
+            "technologies": ["react"]
+        },
+        {
+            "imageUrl": "/internal_project/grovayo/present.jpg",
+            "title": "Grovayo",
+            "description": "Social media webpage. Project for bachelor degree.",
+            "redirectLinks": [
+                {
+                    "type": "github",
+                    "url": "https://github.com/IonutDaniel99/Grovayo"
+                }
+            ],
+            "technologies": ["php", "laravel", "vue", "mysql"]
+        },
+        {
+            "imageUrl": "/internal_project/Cards/Present.png",
+            "title": "Unique Cards",
+            "description": "Custom challenging cards to improve my design skills.",
+            "redirectLinks": [
+                {
+                    "type": "redirect",
+                    "url": "/internal_projects/custom_cards"
+                }
+            ],
+            "technologies": ["react"]
+        },
+        {
+            "imageUrl": "https://github.com/IonutDaniel99/ScrapeRomania-Map/raw/master/public/github/example.png",
+            "title": "Scrape Romania Map",
+            "description": "Interactive Map of locations to visit in Romania.",
+            "redirectLinks": [
+                {
+                    "type": "github",
+                    "url": "https://github.com/IonutDaniel99/ScrapeRomania-Map"
+                }
+            ],
+            "technologies": ["react", "firebase"]
+        }
+    ]
+}

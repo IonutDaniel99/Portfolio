@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import { Geist, Geist_Mono, Open_Sans } from 'next/font/google'
 import './globals.css'
 import { Providers } from './providers'
-import FollowBackground from '@/components/FollowBackground'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 
@@ -27,7 +26,6 @@ export default function RootLayout({
         <html lang="en" suppressHydrationWarning>
             <body className={`${openSans.variable} antialiased dark bg-background text-foreground`}>
                 <Providers>
-                    <FollowBackground />
                     {children}
                     <Analytics />
                     <SpeedInsights />
