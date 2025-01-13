@@ -87,6 +87,18 @@
             "technologies": ["react"]
         },
         {
+            "imageUrl": "/internal_project/NexusHub/NexusHub.png",
+            "title": "Nexus Hub",
+            "description": "Modular window manager for multiple services. (Video on GitHub Repo)",
+            "redirectLinks": [
+                {
+                    "type": "github",
+                    "url": "https://github.com/IonutDaniel99/NexusHub"
+                }
+            ],
+            "technologies": ["react", "typescript", "node", "prisma", "sqlite", "maps"]
+        },
+        {
             "imageUrl": "https://github.com/IonutDaniel99/ScrapeRomania-Map/raw/master/public/github/example.png",
             "title": "Scrape Romania Map",
             "description": "Interactive Map of locations to visit in Romania.",
@@ -97,6 +109,22 @@
                 }
             ],
             "technologies": ["react", "firebase"]
+        },
+        {
+            "imageUrl": "https://raw.githubusercontent.com/IonutDaniel99/Doodle-Jump-C--Clone/refs/heads/master/Images/poster.jpg",
+            "title": "Doodle Jump Clone",
+            "description": "Doodle Jump clone from scratch made in unity using C#.",
+            "redirectLinks": [
+                {
+                    "type": "github",
+                    "url": "https://github.com/IonutDaniel99/Doodle-Jump-C--Clone/tree/master"
+                },
+                {
+                    "type": "youtube",
+                    "url": "https://www.youtube.com/watch?v=VqydHSGXtCk"
+                }
+            ],
+            "technologies": ["csharp", "unity"]
         }
     ]
 }

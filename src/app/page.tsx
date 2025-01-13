@@ -1,7 +1,7 @@
 'use client'
 import FollowBackground from '@/components/FollowBackground'
 import ProjectTemplate from '@/components/project-template.component'
-import { Card, CardBody, Divider, Spinner, Tab, Tabs } from '@nextui-org/react'
+import { Card, CardBody, Divider, Spinner, Tab, Tabs, Tooltip } from '@nextui-org/react'
 import dayjs from 'dayjs'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
@@ -82,63 +82,44 @@ export default function Home() {
     return (
         <>
             <FollowBackground />
-            <div className="min-h-screen w-full xl:w-5/6 mx-auto p-8 pb-20 sm:p-12 font-[family-name:var(--font-open-sans)] z-10 relative">
+            <div className="min-h-screen w-full xl:w-5/6 mx-auto p-4 pb-20 sm:p-12 font-[family-name:var(--font-open-sans)] z-10 relative">
                 <div className="flex justify-between items-center mb-8">
                     <div className="w-4/6 sm:w-5/6 flex justify-start flex-col">
-                        <h1 className="text-2xl font-bold">Hi, I&apos;m Ionut Daniel Ene</h1>
-                        <div className="text-sm my-2 flex flex-col">
-                            <div className="flex items-center gap-1">
-                                <p>I'm a full-stack developer with </p>
-                                <span>
-                                    <Image
-                                        src="/typescript.svg"
-                                        width={16}
-                                        height={16}
-                                        alt="TypeScript logo"
-                                        className="inline-block"
-                                    />
-                                    &nbsp;
-                                    <a
-                                        href="https://www.typescriptlang.org"
-                                        className="font-bold underline underline-offset-2 hover:text-blue-600 transition-colors"
-                                    >
-                                        TypeScript.
-                                    </a>
-                                </span>
-                            </div>
-                            <div className="flex items-center gap-1">
-                                <p>I use it daily in both </p>
-                                <Image
-                                    src="/nextjs.svg"
-                                    width={16}
-                                    height={16}
-                                    alt="Next.js logo"
-                                    className="invert inline-block"
-                                />
-                                <a
-                                    href="https://nextjs.org"
-                                    className="font-bold underline underline-offset-2 hover:text-blue-600 transition-colors"
-                                >
-                                    Next.js
-                                </a>
-                                <p>and</p>
-                                <Image
-                                    src="/nestjs.svg"
-                                    width={16}
-                                    height={16}
-                                    alt="NestJS logo"
-                                    className="inline-block"
-                                />
-                                <a
-                                    href="https://nestjs.com"
-                                    className="font-bold underline underline-offset-2 hover:text-blue-600 transition-colors"
-                                >
-                                    NestJS.
-                                </a>
-                            </div>
+                        <h1 className="text-xl sm:text-2xl font-bold">Hi, I&apos;m Ionut Daniel Ene</h1>
+                        <div className="text-xs sm:text-base my-2">
+                            <p>
+                                Full-stack developer with&nbsp;
+                                <span className="font-bold underline underline-offset-2">TypeScript</span>.&nbsp;I use
+                                it daily in both&nbsp;
+                                <b className="underline underline-offset-2">Next.js</b>&nbsp;and&nbsp;
+                                <b className="underline underline-offset-2">NestJs</b>.
+                            </p>
                             <p className="w-fit">
                                 For more details, check the <b>Details</b> tab below.
                             </p>
+                        </div>
+                        <div className="flex gap-2">
+                            <a href="https://www.linkedin.com/in/ionut-daniel-ene/" target="_blank" rel="noreferrer">
+                                <Tooltip content="Linkedin Profile" placement="top" className="capitalize">
+                                    <Image src={`linkedin.svg`} width={28} height={28} alt={'Linkedin'} />
+                                </Tooltip>
+                            </a>
+                            <a href="https://github.com/IonutDaniel99" target="_blank" rel="noreferrer">
+                                <Tooltip content="Github Profile" placement="top" className="capitalize">
+                                    <Image
+                                        src={`tech_icons/github.svg`}
+                                        width={28}
+                                        height={28}
+                                        alt={'Github'}
+                                        className="invert"
+                                    />
+                                </Tooltip>
+                            </a>
+                            <a href="mailto:ionut.daniel644@gmail.com" target="_blank" rel="noreferrer">
+                                <Tooltip content="Email - ionut.daniel644@gmail.com" placement="top">
+                                    <Image src={`gmail.svg`} width={28} height={28} alt={'Gmail'} />
+                                </Tooltip>
+                            </a>
                         </div>
                     </div>
                     <div className="w-2/6 sm:w-1/6 flex justify-end">
@@ -156,40 +137,43 @@ export default function Home() {
                         <Tab key="details" title="Details">
                             <Card className="p-2 bg-opacity-70">
                                 <CardBody className="text-gray-300">
-                                    <div className="text-sm flex flex-col gap-1">
-                                        <p className="text-lg font-bold pb-4 underline underline-offset-4">
+                                    <div className="text-sm flex flex-col gap-4">
+                                        <p className="text-lg font-bold pb-2 underline underline-offset-4">
                                             A bit of my story!
                                         </p>
-                                        <p>
-                                            Hi there! I’m a full-stack developer with about 4 years of experience
-                                            working in companies and 2 years freelancing.
-                                        </p>
-                                        <p>
-                                            My career started back in 2018 during my first year of university when I
-                                            joined an internship and was introduced to Laravel. A few months later, I
-                                            landed my first freelance project, building a course platform using Vue and
-                                            Laravel.
-                                        </p>
-                                        <p>
-                                            Fast forward a bit—COVID hit, and I worked at a Vodafone call center while
-                                            finishing my university project, which was also built with Laravel. Around
-                                            the same time, I started learning React since companies in my area were
-                                            mostly hiring for Java or React developers. Also nowadays, I have a master
-                                            degree in Computer Science.
-                                        </p>
-                                        <p>
-                                            In April 2021, I joined Endava as a frontend developer and grew from
-                                            mid-junior to mid-senior level (the role titles were a bit unusual in
-                                            Endava). By the end of 2023, I decided to transition to a full-stack
-                                            position to further expand my skills, tho I’m still looking for challanges.
-                                        </p>
-                                        Thanks!
+                                        <div className="space-y-4">
+                                            <p>
+                                                Hi there! I'm a full-stack developer with about 4 years of experience
+                                                working in companies and 2 years freelancing.
+                                            </p>
+                                            <p>
+                                                My career started back in 2018 during my first year of university when I
+                                                joined an internship and was introduced to Laravel. A few months later,
+                                                I landed my first freelance project, building a course platform using
+                                                Vue and Laravel.
+                                            </p>
+                                            <p>
+                                                Fast forward a bit—COVID hit, and I worked at a Vodafone call center
+                                                while finishing my university project, which was also built with
+                                                Laravel. Around the same time, I started learning React since companies
+                                                in my area were mostly hiring for Java or React developers. Also
+                                                nowadays, I have a master degree in Computer Science.
+                                            </p>
+                                            <p>
+                                                In April 2021, I joined Endava as a frontend developer and grew from
+                                                mid-junior to mid-senior level (the role titles were a bit unusual in
+                                                Endava). By the end of 2023, I decided to transition to a full-stack
+                                                position to further expand my skills, tho I’m still looking for
+                                                challanges.
+                                            </p>
+                                        </div>
+                                        <p>Thanks!</p>
                                     </div>
                                 </CardBody>
                                 <Divider />
                                 <CardBody className="text-gray-300">
                                     <div className="text-sm flex flex-col gap-1">
-                                        <div className="flex items-center gap-2 pb-4">
+                                        <div className="flex items-center gap-2 pb-2">
                                             <p className="text-lg font-bold underline underline-offset-4">
                                                 My tech stack!
                                             </p>
@@ -237,7 +221,7 @@ export default function Home() {
                                             I've worked on a few projects aimed at helping users.
                                         </p>
                                     </div>
-                                    <div className="flex flex-row gap-4 flex-wrap">
+                                    <div className="flex flex-row gap-4 flex-grow md:flex-grow-0 md:flex-wrap justify-evenly md:justify-center lg:justify-start">
                                         {projects_json.public_projects.map((project: any, index: number) => (
                                             <ProjectTemplate
                                                 key={index}
@@ -259,7 +243,7 @@ export default function Home() {
                                             experiment with new ideas.
                                         </p>
                                     </div>
-                                    <div className="flex flex-row gap-4 flex-wrap">
+                                    <div className="flex flex-row gap-4 flex-grow sm:flex-grow-0 sm:flex-wrap justify-evenly md:justify-center lg:justify-start">
                                         {projects_json.personal_projects.map((project: any, index: number) => (
                                             <ProjectTemplate
                                                 key={index}
@@ -280,8 +264,15 @@ export default function Home() {
                                     <div className="text-sm flex flex-col gap-1">
                                         <p className="text-lg font-bold pb-2">Real Time Statistics!</p>
                                         <p className="pb-2 text-sm">
-                                            On May 10, 2024, I discovered an extension called WakaTime, which tracks how
-                                            much time you spend working on different areas of development.
+                                            On May 10, 2024, I discovered an extension called{' '}
+                                            <a
+                                                href="https://wakatime.com"
+                                                className="underline text-blue-400 underline-offset-2"
+                                            >
+                                                WakaTime
+                                            </a>
+                                            , which tracks how much time you spend working on different areas of
+                                            development.
                                         </p>
                                         <Divider />
                                         {isLoading ? (
@@ -293,7 +284,7 @@ export default function Home() {
                                                 <p className="pt-2">
                                                     Here&apos;s a breakdown of the languages and tools I&apos;ve used:
                                                 </p>
-                                                <div className="grid grid-cols-2 lg:grid-cols-3 gap-2 pt-4">
+                                                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 2xl:grid-cols-5 gap-2 pt-4">
                                                     {wakaTimeData.map((data) => {
                                                         if (data.total_seconds < 60) return
                                                         return (
@@ -318,11 +309,6 @@ export default function Home() {
                                 </CardBody>
                             </Card>
                         </Tab>
-                        {/* <Tab key="cotact" title="Contact">
-                            <Card>
-                                <CardBody className="text-gray-300"></CardBody>
-                            </Card>
-                        </Tab> */}
                     </Tabs>
                 </div>
             </div>
