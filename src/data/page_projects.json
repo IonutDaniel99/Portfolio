@@ -1,6 +1,18 @@
 {
     "public_projects": [
         {
+            "imageUrl": "internal_project/GamesInventory/LandingPage.png",
+            "title": "Games Subscription",
+            "description": "Discover duplicated games from different platforms.",
+            "redirectLinks": [
+                {
+                    "type": "redirect",
+                    "url": "https://games-inventory-ruddy.vercel.app"
+                }
+            ],
+            "technologies": ["typescript", "react", "next", "mongo"]
+        },
+        {
             "imageUrl": "/internal_project/SubsManager/landingcard.png",
             "title": "Subscription Manager",
             "description": "Helps you track your subscriptions and payments.",
